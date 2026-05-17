@@ -1,0 +1,2518 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lesson 4 — Receiving Foreign Guests 接待外賓｜複習網站</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Noto+Serif+TC:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --paper:#061a33;
+  --paper-2:#0d2d54;
+  --card:#0f3763;
+  --card-2:#123f72;
+  --ink:#f8fbff;
+  --ink-soft:#d8e8ff;
+  --rust:#ffd166;
+  --rust-soft:#ffe08f;
+  --teal:#4db3ff;
+  --teal-soft:#8bd3ff;
+  --gold:#ffd166;
+  --olive:#a6e3ff;
+  --line:rgba(255,255,255,0.22);
+  --highlight:rgba(255,209,102,0.38);
+  --shadow:rgba(0,0,0,0.28);
+  --tooltip-bg:#ffffff;
+  --tooltip-text:#06203d;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  font-family:'Noto Serif TC','Cormorant Garamond',serif;
+  background:var(--paper);
+  color:var(--ink);
+  line-height:1.7;
+  font-size:17px;
+  min-height:100vh;
+  background-image:
+    radial-gradient(at 20% 10%,rgba(180,138,60,0.05) 0,transparent 50%),
+    radial-gradient(at 80% 80%,rgba(31,91,91,0.05) 0,transparent 50%);
+}
+
+/* ============ TOP NAVIGATION ============ */
+.topbar{
+  position:sticky;top:0;z-index:100;
+  background:rgba(6,26,51,0.96);
+  backdrop-filter:blur(10px);
+  border-bottom:1px solid var(--line);
+  padding:14px 24px;
+  display:flex;align-items:center;justify-content:space-between;
+  gap:16px;
+}
+.brand{
+  font-family:'Cormorant Garamond',serif;
+  font-style:italic;
+  font-weight:600;
+  font-size:1.4rem;
+  color:var(--rust);
+  letter-spacing:0.02em;
+}
+.brand small{
+  font-family:'Noto Serif TC',serif;
+  font-style:normal;
+  font-size:0.85rem;
+  color:var(--ink-soft);
+  margin-left:8px;
+}
+.nav-tabs{
+  display:flex;gap:4px;flex-wrap:wrap;
+}
+.nav-tab{
+  background:transparent;
+  border:1px solid transparent;
+  padding:7px 14px;
+  font-family:'Noto Serif TC',serif;
+  font-size:0.92rem;
+  color:var(--ink-soft);
+  cursor:pointer;
+  border-radius:4px;
+  transition:all 0.2s;
+  letter-spacing:0.02em;
+}
+.nav-tab:hover{color:var(--rust);background:rgba(255,255,255,0.08)}
+.nav-tab.active{
+  color:#fff;
+  background:var(--teal);
+  border-color:var(--teal);
+}
+
+/* ============ MAIN LAYOUT ============ */
+.container{
+  max-width:1100px;
+  margin:0 auto;
+  padding:40px 28px 80px;
+}
+.view{display:none;animation:fadeIn 0.35s ease}
+.view.active{display:block}
+@keyframes fadeIn{
+  from{opacity:0;transform:translateY(8px)}
+  to{opacity:1;transform:translateY(0)}
+}
+
+/* ============ HEADINGS ============ */
+h1.lesson-title{
+  font-family:'Cormorant Garamond',serif;
+  font-size:clamp(2.2rem,5vw,3.4rem);
+  font-weight:600;
+  font-style:italic;
+  color:var(--rust);
+  line-height:1.1;
+  margin-bottom:8px;
+  letter-spacing:-0.01em;
+}
+h1.lesson-title .ch{
+  display:block;
+  font-family:'Noto Serif TC',serif;
+  font-style:normal;
+  font-size:0.55em;
+  font-weight:500;
+  color:var(--ink);
+  margin-top:8px;
+  letter-spacing:0.15em;
+}
+h2.section-title{
+  font-family:'Cormorant Garamond',serif;
+  font-size:1.9rem;
+  font-weight:600;
+  color:var(--teal);
+  margin:36px 0 18px;
+  padding-bottom:8px;
+  border-bottom:2px solid var(--line);
+  display:flex;align-items:baseline;gap:12px;
+}
+h2.section-title .num{
+  font-style:italic;
+  font-size:0.85em;
+  color:var(--gold);
+}
+h3.sub-title{
+  font-family:'Noto Serif TC',serif;
+  font-size:1.2rem;
+  font-weight:600;
+  color:var(--rust);
+  margin:24px 0 12px;
+  padding-left:14px;
+  border-left:3px solid var(--rust);
+}
+h4{
+  font-family:'Noto Serif TC',serif;
+  font-size:1.05rem;
+  font-weight:600;
+  color:var(--teal);
+  margin:16px 0 8px;
+}
+
+/* ============ HOME PAGE ============ */
+.hero{
+  text-align:center;
+  padding:40px 0 30px;
+  position:relative;
+}
+.hero::before{
+  content:'';
+  position:absolute;
+  top:20px;left:50%;transform:translateX(-50%);
+  width:60px;height:1px;
+  background:var(--rust);
+}
+.hero-sub{
+  font-family:'Cormorant Garamond',serif;
+  font-style:italic;
+  color:var(--ink-soft);
+  font-size:1.15rem;
+  margin-top:14px;
+  letter-spacing:0.05em;
+}
+.menu-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+  gap:22px;
+  margin-top:40px;
+}
+.menu-card{
+  background:var(--card);
+  border:1px solid var(--line);
+  border-radius:8px;
+  padding:28px 24px;
+  cursor:pointer;
+  transition:all 0.25s;
+  position:relative;
+  overflow:hidden;
+}
+.menu-card::before{
+  content:'';
+  position:absolute;
+  top:0;left:0;right:0;
+  height:3px;
+  background:var(--rust);
+  transform:scaleX(0);
+  transform-origin:left;
+  transition:transform 0.3s;
+}
+.menu-card:hover{
+  transform:translateY(-4px);
+  box-shadow:0 12px 32px var(--shadow);
+}
+.menu-card:hover::before{transform:scaleX(1)}
+.menu-card .icon{
+  font-size:2.2rem;
+  margin-bottom:12px;
+  display:block;
+}
+.menu-card .label{
+  font-family:'Cormorant Garamond',serif;
+  font-style:italic;
+  font-size:0.85rem;
+  color:var(--gold);
+  letter-spacing:0.15em;
+  text-transform:uppercase;
+  margin-bottom:6px;
+}
+.menu-card h3{
+  font-family:'Noto Serif TC',serif;
+  font-size:1.25rem;
+  font-weight:600;
+  color:var(--ink);
+  margin-bottom:8px;
+}
+.menu-card p{
+  color:var(--ink-soft);
+  font-size:0.93rem;
+  line-height:1.6;
+}
+
+/* ============ CONTENT CARDS ============ */
+.card{
+  background:var(--card);
+  border:1px solid var(--line);
+  border-radius:6px;
+  padding:24px 26px;
+  margin-bottom:20px;
+  box-shadow:0 2px 8px var(--shadow);
+}
+.card-warm{
+  background:linear-gradient(135deg,#123f72 0%,#0d2d54 100%);
+  border-color:var(--gold);
+}
+.card-teal{
+  background:linear-gradient(135deg,#0f3763 0%,#164a80 100%);
+  border-color:var(--teal-soft);
+}
+
+/* ============ DIALOGUE ============ */
+.dialogue{
+  background:var(--card);
+  border:1px solid var(--line);
+  border-radius:6px;
+  padding:28px 30px;
+  margin:20px 0;
+  font-family:'Cormorant Garamond','Noto Serif TC',serif;
+  font-size:1.08rem;
+  line-height:2;
+}
+.dialogue .role{
+  display:inline-block;
+  font-weight:700;
+  color:var(--rust);
+  min-width:30px;
+  margin-right:6px;
+}
+.dialogue .line{
+  margin-bottom:10px;
+  padding-left:0;
+}
+.dialogue .stage{
+  font-style:italic;
+  color:var(--ink-soft);
+  font-size:0.95em;
+  margin:10px 0;
+  padding-left:36px;
+}
+.dialogue .vocab-mark{
+  background:rgba(255,209,102,0.25);
+  padding:1px 5px;
+  border-radius:3px;
+  font-weight:600;
+  cursor:pointer;
+  position:relative;
+  display:inline-block;
+}
+.dialogue .vocab-mark::after{
+  content:attr(data-cn);
+  position:absolute;
+  left:50%;
+  bottom:135%;
+  transform:translateX(-50%) translateY(4px);
+  background:var(--tooltip-bg);
+  color:var(--tooltip-text);
+  font-family:'Noto Serif TC',serif;
+  font-size:0.82rem;
+  font-weight:500;
+  line-height:1.4;
+  white-space:nowrap;
+  padding:6px 10px;
+  border-radius:5px;
+  box-shadow:0 8px 22px rgba(0,0,0,0.35);
+  opacity:0;
+  visibility:hidden;
+  pointer-events:none;
+  z-index:20;
+  transition:opacity 0.18s ease, transform 0.18s ease, visibility 0.18s ease;
+}
+.dialogue .vocab-mark::before{
+  content:'';
+  position:absolute;
+  left:50%;
+  bottom:118%;
+  transform:translateX(-50%);
+  border:6px solid transparent;
+  border-top-color:var(--tooltip-bg);
+  opacity:0;
+  visibility:hidden;
+  pointer-events:none;
+  z-index:21;
+  transition:opacity 0.18s ease, visibility 0.18s ease;
+}
+.dialogue .vocab-mark:hover::after,
+.dialogue .vocab-mark:focus::after,
+.dialogue .vocab-mark.show-tooltip::after{
+  opacity:1;
+  visibility:visible;
+  transform:translateX(-50%) translateY(0);
+}
+.dialogue .vocab-mark:hover::before,
+.dialogue .vocab-mark:focus::before,
+.dialogue .vocab-mark.show-tooltip::before{
+  opacity:1;
+  visibility:visible;
+}
+@media (hover:none){
+  .dialogue .vocab-mark:hover::after,
+  .dialogue .vocab-mark:hover::before{
+    opacity:0;
+    visibility:hidden;
+  }
+  .dialogue .vocab-mark.show-tooltip::after,
+  .dialogue .vocab-mark.show-tooltip::before{
+    opacity:1;
+    visibility:visible;
+  }
+}
+.dialogue .phrase-mark{
+  border-bottom:2px dotted var(--teal);
+  color:var(--teal);
+  font-weight:500;
+}
+
+.dialogue .fill-answer{
+  color:var(--ink);
+  font-weight:700;
+  border-bottom:1.5px dotted rgba(255,255,255,0.45);
+  padding:0 2px;
+}
+.dialogue .line-zh .fill-answer{
+  color:var(--ink-soft);
+  border-bottom:none;
+  font-weight:600;
+}
+
+
+/* ============ INLINE SENTENCE TRANSLATION ============ */
+.dialogue .line-zh{
+  margin:4px 0 8px 36px;
+  padding:6px 12px;
+  background:var(--paper-2);
+  border-left:3px solid var(--olive);
+  border-radius:0 4px 4px 0;
+  color:var(--ink-soft);
+  font-family:'Noto Serif TC',serif;
+  font-size:0.94rem;
+  line-height:1.65;
+}
+.dialogue .intro-zh{
+  margin:6px 0 14px 0;
+  padding:8px 12px;
+  background:rgba(122,123,62,0.1);
+  border-left:3px solid var(--olive);
+  border-radius:0 4px 4px 0;
+  color:var(--ink-soft);
+  font-family:'Noto Serif TC',serif;
+  font-size:0.94rem;
+  line-height:1.7;
+}
+.dialogue .scene-zh{
+  margin:4px 0 10px 0;
+  color:var(--ink-soft);
+  font-family:'Noto Serif TC',serif;
+  font-size:0.94rem;
+}
+
+/* ============ TRANSLATION ============ */
+.translation{
+  background:var(--paper-2);
+  border-left:4px solid var(--olive);
+  padding:18px 22px;
+  margin:14px 0;
+  border-radius:0 6px 6px 0;
+  font-size:0.98rem;
+  color:var(--ink-soft);
+  line-height:1.9;
+}
+.translation .role{font-weight:700;color:var(--olive);margin-right:6px}
+
+/* ============ VOCAB TABLE ============ */
+.vocab-table{
+  width:100%;
+  border-collapse:collapse;
+  margin:12px 0;
+  font-size:0.93rem;
+  background:var(--card);
+}
+.vocab-table th{
+  background:var(--teal);
+  color:#fff;
+  padding:10px 12px;
+  text-align:left;
+  font-family:'Noto Serif TC',serif;
+  font-weight:600;
+  font-size:0.88rem;
+  letter-spacing:0.05em;
+}
+.vocab-table td{
+  padding:10px 12px;
+  border-bottom:1px solid var(--line);
+  vertical-align:top;
+}
+.vocab-table tr:hover td{background:rgba(255,255,255,0.08)}
+.vocab-table .word{
+  font-family:'Cormorant Garamond',serif;
+  font-weight:600;
+  color:var(--rust);
+  font-size:1.05em;
+}
+.vocab-table .ipa{
+  font-family:'JetBrains Mono',monospace;
+  font-size:0.85em;
+  color:var(--ink-soft);
+}
+.vocab-table .pos{
+  font-style:italic;
+  color:var(--olive);
+  font-size:0.85em;
+  font-family:'Cormorant Garamond',serif;
+}
+.vocab-table .ex{font-style:italic;color:var(--ink-soft);font-size:0.92em}
+.vocab-table-wrap{
+  overflow-x:auto;
+  margin:14px -4px;
+  padding:4px;
+}
+
+/* ============ PHRASE LIST ============ */
+.phrase-list{list-style:none;padding:0}
+.phrase-item{
+  background:var(--card);
+  border:1px solid var(--line);
+  border-left:4px solid var(--teal);
+  padding:14px 18px;
+  margin-bottom:10px;
+  border-radius:0 6px 6px 0;
+}
+.phrase-item .ph{
+  font-family:'Cormorant Garamond',serif;
+  font-weight:600;
+  font-size:1.1rem;
+  color:var(--teal);
+}
+.phrase-item .ph-cn{color:var(--rust);font-weight:600;margin-left:10px}
+.phrase-item .ph-note{
+  display:block;
+  color:var(--ink-soft);
+  font-size:0.92rem;
+  margin-top:4px;
+}
+.phrase-item .ph-ex{
+  display:block;
+  font-style:italic;
+  color:var(--ink-soft);
+  font-size:0.92rem;
+  margin-top:4px;
+  padding-left:14px;
+  border-left:2px solid var(--line);
+}
+
+/* ============ GRAMMAR POINTS ============ */
+.grammar-pt{
+  background:var(--card);
+  border:1px solid var(--line);
+  border-radius:6px;
+  padding:16px 20px;
+  margin-bottom:12px;
+}
+.grammar-pt .pt-title{
+  font-weight:600;
+  color:var(--rust);
+  font-size:1.02rem;
+  margin-bottom:6px;
+  display:flex;align-items:center;gap:6px;
+}
+.grammar-pt .pt-content{color:var(--ink-soft);font-size:0.95rem;line-height:1.8}
+.grammar-pt code{
+  font-family:'JetBrains Mono',monospace;
+  background:rgba(255,209,102,0.18);
+  padding:1px 6px;
+  border-radius:3px;
+  color:var(--rust);
+  font-size:0.92em;
+}
+.star{color:var(--rust);font-size:0.9em;letter-spacing:1px}
+
+/* ============ TEACHER NOTE ============ */
+.teacher-note{
+  background:linear-gradient(135deg,#173f6c 0%,#245b91 100%);
+  border:2px dashed var(--gold);
+  border-radius:6px;
+  padding:14px 18px;
+  margin:14px 0;
+  position:relative;
+}
+.teacher-note::before{
+  content:'📝 老師手寫筆記';
+  display:inline-block;
+  background:var(--gold);
+  color:#fff;
+  padding:2px 10px;
+  font-size:0.78rem;
+  font-weight:600;
+  border-radius:3px;
+  margin-bottom:8px;
+  letter-spacing:0.05em;
+}
+.teacher-note .tn-content{color:var(--ink);font-size:0.95rem;line-height:1.8}
+
+/* ============ QUIZ ENTRY ============ */
+.quiz-entry-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+  gap:24px;
+  margin-top:30px;
+}
+.quiz-entry-card{
+  background:var(--card);
+  border:2px solid var(--line);
+  border-radius:8px;
+  padding:32px 28px;
+  text-align:center;
+  cursor:pointer;
+  transition:all 0.3s;
+  position:relative;
+  overflow:hidden;
+}
+.quiz-entry-card.practice{border-color:var(--teal)}
+.quiz-entry-card.exam{border-color:var(--rust)}
+.quiz-entry-card:hover{
+  transform:translateY(-5px);
+  box-shadow:0 16px 36px var(--shadow);
+}
+.quiz-entry-card .qe-icon{font-size:3rem;margin-bottom:14px;display:block}
+.quiz-entry-card h3{
+  font-family:'Noto Serif TC',serif;
+  font-size:1.4rem;
+  font-weight:600;
+  margin-bottom:8px;
+  color:var(--ink);
+}
+.quiz-entry-card.practice h3{color:var(--teal)}
+.quiz-entry-card.exam h3{color:var(--rust)}
+.quiz-entry-card p{color:var(--ink-soft);font-size:0.94rem;margin-bottom:16px;line-height:1.7}
+.quiz-entry-card .qe-btn{
+  display:inline-block;
+  padding:10px 24px;
+  font-family:'Noto Serif TC',serif;
+  font-size:0.95rem;
+  font-weight:600;
+  border-radius:4px;
+  border:none;
+  cursor:pointer;
+  letter-spacing:0.05em;
+}
+.quiz-entry-card.practice .qe-btn{background:var(--teal);color:#fff}
+.quiz-entry-card.exam .qe-btn{background:var(--rust);color:#fff}
+
+/* ============ QUIZ QUESTION ============ */
+.quiz-toolbar{
+  display:flex;
+  flex-wrap:wrap;
+  align-items:center;
+  justify-content:space-between;
+  gap:10px;
+  background:var(--card);
+  border:1px solid var(--line);
+  border-radius:6px;
+  padding:12px 18px;
+  margin-bottom:18px;
+  position:sticky;
+  top:60px;
+  z-index:50;
+}
+.quiz-toolbar .progress-info{
+  font-family:'Cormorant Garamond',serif;
+  color:var(--ink-soft);
+  font-size:1rem;
+}
+.quiz-toolbar .progress-info strong{color:var(--rust);font-size:1.2em}
+.quiz-toolbar .timer{
+  font-family:'JetBrains Mono',monospace;
+  font-size:1.1rem;
+  font-weight:600;
+  color:var(--rust);
+  background:rgba(255,209,102,0.16);
+  padding:6px 14px;
+  border-radius:4px;
+  border:1px solid var(--rust);
+}
+.quiz-toolbar .timer.warning{
+  color:#fff;
+  background:var(--rust);
+  animation:pulse 1s infinite;
+}
+@keyframes pulse{
+  0%,100%{opacity:1}
+  50%{opacity:0.7}
+}
+.quiz-toolbar .filter-tag{
+  display:inline-block;
+  padding:4px 10px;
+  font-size:0.82rem;
+  background:var(--paper-2);
+  border-radius:3px;
+  color:var(--ink-soft);
+  cursor:pointer;
+  border:1px solid var(--line);
+}
+.quiz-toolbar .filter-tag.active{
+  background:var(--teal);
+  color:#fff;
+  border-color:var(--teal);
+}
+
+.quiz-question{
+  background:var(--card);
+  border:1px solid var(--line);
+  border-radius:6px;
+  padding:24px 26px;
+  margin-bottom:18px;
+  box-shadow:0 2px 8px var(--shadow);
+}
+.q-header{
+  display:flex;
+  align-items:baseline;
+  gap:10px;
+  margin-bottom:14px;
+}
+.q-num{
+  font-family:'Cormorant Garamond',serif;
+  font-weight:700;
+  font-size:1.5rem;
+  color:var(--rust);
+  font-style:italic;
+  min-width:40px;
+}
+.q-type{
+  font-family:'Noto Serif TC',serif;
+  font-size:0.78rem;
+  background:var(--paper-2);
+  padding:2px 8px;
+  border-radius:3px;
+  color:var(--ink-soft);
+  border:1px solid var(--line);
+}
+.q-stem{
+  font-size:1.05rem;
+  line-height:1.8;
+  margin-bottom:16px;
+  color:var(--ink);
+}
+.q-stem blockquote{
+  background:var(--paper-2);
+  border-left:3px solid var(--olive);
+  padding:12px 16px;
+  margin:10px 0;
+  font-style:italic;
+  font-size:0.98em;
+  color:var(--ink-soft);
+}
+.q-options{list-style:none;padding:0}
+.q-option{
+  display:flex;
+  align-items:flex-start;
+  gap:12px;
+  padding:11px 16px;
+  margin-bottom:8px;
+  background:var(--card);
+  border:1.5px solid var(--line);
+  border-radius:5px;
+  cursor:pointer;
+  transition:all 0.2s;
+  font-size:0.98rem;
+}
+.q-option:hover{background:var(--paper-2);border-color:var(--gold)}
+.q-option .opt-letter{
+  font-family:'Cormorant Garamond',serif;
+  font-weight:700;
+  font-style:italic;
+  color:var(--rust);
+  min-width:24px;
+}
+.q-option.selected{background:rgba(77,179,255,0.18);border-color:var(--teal)}
+.q-option.correct{
+  background:rgba(166,227,255,0.18);
+  border-color:var(--olive);
+  border-width:2px;
+}
+.q-option.correct .opt-letter{color:var(--olive)}
+.q-option.wrong{
+  background:rgba(255,209,102,0.18);
+  border-color:var(--rust);
+  border-width:2px;
+}
+.q-option.wrong .opt-letter{color:var(--rust)}
+.q-option.disabled{cursor:default}
+.q-explain{
+  margin-top:14px;
+  padding:14px 18px;
+  background:linear-gradient(135deg,#0d2d54 0%,#123f72 100%);
+  border-radius:5px;
+  font-size:0.93rem;
+  line-height:1.8;
+  border-left:3px solid var(--gold);
+  display:none;
+}
+.q-explain.show{display:block;animation:fadeIn 0.3s}
+.q-explain .ex-label{
+  display:inline-block;
+  background:var(--gold);
+  color:#fff;
+  padding:2px 8px;
+  font-size:0.78rem;
+  font-weight:600;
+  border-radius:3px;
+  margin-right:6px;
+}
+.q-explain .ex-correct{color:var(--olive);font-weight:600}
+.q-source{
+  margin-top:10px;
+  font-size:0.85rem;
+  color:var(--ink-soft);
+  font-style:italic;
+}
+.q-source::before{content:'📍 '}
+
+/* ============ EXAM MODE ============ */
+.exam-controls{
+  display:flex;justify-content:center;gap:14px;
+  margin:30px 0;
+}
+.btn{
+  font-family:'Noto Serif TC',serif;
+  padding:11px 28px;
+  font-size:0.98rem;
+  font-weight:600;
+  border:none;
+  border-radius:5px;
+  cursor:pointer;
+  letter-spacing:0.05em;
+  transition:all 0.2s;
+}
+.btn-primary{background:var(--rust);color:#fff}
+.btn-primary:hover{background:var(--rust-soft);transform:translateY(-1px)}
+.btn-secondary{background:var(--paper-2);color:var(--ink);border:1px solid var(--line)}
+.btn-secondary:hover{background:var(--line)}
+.btn-teal{background:var(--teal);color:#fff}
+.btn-teal:hover{background:var(--teal-soft)}
+
+.result-panel{
+  background:var(--card);
+  border:2px solid var(--gold);
+  border-radius:8px;
+  padding:30px 32px;
+  margin-bottom:24px;
+  text-align:center;
+}
+.result-score{
+  font-family:'Cormorant Garamond',serif;
+  font-size:5rem;
+  font-weight:700;
+  color:var(--rust);
+  line-height:1;
+  margin:14px 0;
+}
+.result-score small{font-size:0.4em;color:var(--ink-soft);font-weight:400}
+.result-label{
+  font-family:'Cormorant Garamond',serif;
+  font-style:italic;
+  color:var(--gold);
+  font-size:1.1rem;
+  letter-spacing:0.1em;
+  text-transform:uppercase;
+}
+.result-stats{
+  display:flex;justify-content:center;gap:30px;
+  margin-top:20px;
+  flex-wrap:wrap;
+}
+.stat-item{
+  text-align:center;
+  padding:0 16px;
+}
+.stat-item .stat-num{
+  font-family:'Cormorant Garamond',serif;
+  font-size:2rem;
+  font-weight:700;
+  color:var(--teal);
+}
+.stat-item .stat-label{
+  font-size:0.85rem;
+  color:var(--ink-soft);
+  letter-spacing:0.05em;
+}
+
+/* ============ KEY POINT BOX ============ */
+.kp-box{
+  background:var(--card);
+  border:1px solid var(--line);
+  border-radius:6px;
+  padding:20px 24px;
+  margin-bottom:16px;
+}
+.kp-box .kp-tag{
+  display:inline-block;
+  background:var(--rust);
+  color:#fff;
+  padding:3px 12px;
+  font-size:0.8rem;
+  font-weight:600;
+  border-radius:3px;
+  margin-bottom:10px;
+  letter-spacing:0.05em;
+}
+.kp-box.must .kp-tag{background:var(--rust)}
+.kp-box.medium .kp-tag{background:var(--gold)}
+.kp-box.basic .kp-tag{background:var(--teal)}
+.kp-box h4{margin:0 0 8px;color:var(--ink);font-size:1.1rem}
+.kp-box ul{padding-left:20px;color:var(--ink-soft)}
+.kp-box code{
+  font-family:'JetBrains Mono',monospace;
+  background:rgba(255,209,102,0.18);
+  padding:1px 6px;
+  border-radius:3px;
+  color:var(--rust);
+  font-size:0.9em;
+}
+
+/* ============ HIGHLIGHTS ============ */
+.hl{background:linear-gradient(180deg,transparent 60%,var(--highlight) 60%);padding:0 2px}
+.hl-rust{color:var(--rust);font-weight:600}
+.hl-teal{color:var(--teal);font-weight:600}
+
+/* ============ FOOTER ============ */
+.footer{
+  text-align:center;
+  padding:30px 20px;
+  color:var(--ink-soft);
+  font-size:0.85rem;
+  font-style:italic;
+  border-top:1px solid var(--line);
+  margin-top:60px;
+}
+
+
+/* ============ BLUE MOBILE-FRIENDLY THEME TUNING ============ */
+.card, .dialogue, .quiz-question, .quiz-entry-card, .menu-card, .kp-box, .grammar-pt, .phrase-item, .result-panel{
+  color:var(--ink);
+}
+.menu-card:hover, .quiz-entry-card:hover{
+  box-shadow:0 14px 34px var(--shadow);
+}
+.vocab-table tr:hover td{background:rgba(255,255,255,0.08)}
+.q-option:hover{background:var(--card-2);border-color:var(--teal-soft)}
+.q-option.selected{background:rgba(77,179,255,0.22);border-color:var(--teal-soft)}
+.q-option.correct{background:rgba(166,227,255,0.18);border-color:var(--olive)}
+.q-option.wrong{background:rgba(255,209,102,0.18);border-color:var(--gold)}
+.teacher-note{color:var(--ink)}
+.teacher-note::before{color:#06203d}
+.hl{color:#fff}
+
+/* ============ RESPONSIVE ============ */
+@media(max-width:720px){
+  .topbar{padding:10px 14px;flex-direction:column;align-items:stretch;gap:8px}
+  .brand{font-size:1.15rem;text-align:center}
+  .nav-tabs{justify-content:center}
+  .nav-tab{padding:6px 10px;font-size:0.85rem}
+  .container{padding:24px 16px 60px}
+  .card,.dialogue,.quiz-question{padding:18px 16px}
+  .dialogue{font-size:1rem}
+  .vocab-table{font-size:0.82rem}
+  .vocab-table th,.vocab-table td{padding:7px 8px}
+  .quiz-toolbar{top:120px;flex-direction:column;align-items:stretch}
+  .result-score{font-size:3.8rem}
+  .result-stats{gap:14px}
+}
+
+/* ============ HIDE / SHOW ============ */
+.hidden{display:none !important}
+
+/* ============ MODE BANNER ============ */
+.mode-banner{
+  background:linear-gradient(135deg,var(--rust) 0%,var(--rust-soft) 100%);
+  color:#fff;
+  padding:14px 20px;
+  border-radius:6px;
+  margin-bottom:20px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:14px;
+  flex-wrap:wrap;
+}
+.mode-banner h3{
+  font-family:'Noto Serif TC',serif;
+  font-size:1.1rem;
+  color:#fff;
+  margin:0;
+}
+.mode-banner p{font-size:0.88rem;opacity:0.95;margin:0}
+.mode-banner.teal{background:linear-gradient(135deg,var(--teal) 0%,var(--teal-soft) 100%)}
+</style>
+</head>
+<body>
+
+<!-- =================== TOP NAV =================== -->
+<nav class="topbar">
+  <div class="brand">Lesson 4 <small>· 接待外賓</small></div>
+  <div class="nav-tabs" id="navTabs">
+    <button class="nav-tab active" data-view="home">🏠 首頁</button>
+    <button class="nav-tab" data-view="partA">Part A</button>
+    <button class="nav-tab" data-view="partB">Part B</button>
+    <button class="nav-tab" data-view="partC">Part C</button>
+    <button class="nav-tab" data-view="partD">Part D</button>
+    <button class="nav-tab" data-view="keypoints">📝 考前重點</button>
+    <button class="nav-tab" data-view="quiz">🎯 小考測驗</button>
+  </div>
+</nav>
+
+<div class="container">
+
+<!-- ================================================== -->
+<!--                    HOME VIEW                       -->
+<!-- ================================================== -->
+<section class="view active" id="view-home">
+  <div class="hero">
+    <h1 class="lesson-title">Receiving Foreign Guests<span class="ch">接待外賓</span></h1>
+    <p class="hero-sub">— Lesson 4 完整複習網站 —</p>
+  </div>
+
+  <div class="card card-warm" style="margin-top:30px">
+    <h3 class="sub-title">本課學習目標</h3>
+    <ul style="padding-left:22px;color:var(--ink-soft);line-height:2">
+      <li>Picking up a visitor — 接機訪客</li>
+      <li>Checking in at a hotel — 飯店辦理入住</li>
+      <li>Showing a visitor around one's workplace — 帶訪客參觀工作場所</li>
+      <li>Showing a visitor around one's city — 帶訪客參觀城市</li>
+    </ul>
+  </div>
+
+  <div class="menu-grid">
+    <div class="menu-card" data-go="partA">
+      <span class="icon">✈️</span>
+      <div class="label">Part A</div>
+      <h3>At the Airport</h3>
+      <p>機場接機。Joseph 接待從加拿大來的客戶 Tonya，含 9 個生字、4 個片語、機場購票座位用語。</p>
+    </div>
+    <div class="menu-card" data-go="partB">
+      <span class="icon">🏨</span>
+      <div class="label">Part B</div>
+      <h3>Accommodation</h3>
+      <p>飯店辦理入住。含 4 個生字、4 個片語、社交回應用語、商業書信格式。</p>
+    </div>
+    <div class="menu-card" data-go="partC">
+      <span class="icon">🏢</span>
+      <div class="label">Part C</div>
+      <h3>A Company Tour</h3>
+      <p>公司參訪。介紹同事、職稱、CEO/CFO/COO/VP/PM 縮寫，必考 look forward to + V-ing。</p>
+    </div>
+    <div class="menu-card" data-go="partD">
+      <span class="icon">🍽️</span>
+      <div class="label">Part D</div>
+      <h3>Showing Hospitality</h3>
+      <p>餐廳款待與市場採購。含 7 個生字、4 個片語、either / prefer 三種用法。</p>
+    </div>
+    <div class="menu-card" data-go="keypoints">
+      <span class="icon">📝</span>
+      <div class="label">Review</div>
+      <h3>考前重點整理</h3>
+      <p>老師手寫筆記精華：mind+V-ing、look forward to、luggage 永遠單數、prefer A to B 等必考點。</p>
+    </div>
+    <div class="menu-card" data-go="quiz" style="background:linear-gradient(135deg,#123f72 0%,#0d2d54 100%);border-color:var(--gold)">
+      <span class="icon">🎯</span>
+      <div class="label">Quiz</div>
+      <h3>小考測驗</h3>
+      <p>60 題完整題庫（練習模式）＋ 隨機 20 題測驗（15 分鐘計時）。</p>
+    </div>
+  </div>
+</section>
+
+<!-- ================================================== -->
+<!--                    PART A VIEW                     -->
+<!-- ================================================== -->
+<section class="view" id="view-partA">
+  <h1 class="lesson-title" style="font-size:2.4rem">Part A · At the Airport<span class="ch">機場接機</span></h1>
+
+  <h2 class="section-title"><span class="num">I.</span> 英文原文＋逐句翻譯</h2>
+  <div class="dialogue">
+    <p style="font-style:italic;color:var(--ink-soft);margin-bottom:14px">Joseph is at the airport to <span class="phrase-mark">pick up</span> a client from Canada.<br>
+    <strong>J:</strong> Joseph　<strong>T:</strong> Tonya</p>
+    <div class="intro-zh"><em>Joseph 在機場要接一位從加拿大來的客戶。</em></div>
+    <div class="line"><span class="role">J:</span> Excuse me. Are you Tonya from Origin <span class="vocab-mark" data-num="1" data-cn="出版商" tabindex="0">Publishers</span>?
+      <div class="line-zh"><span class="role">J：</span>不好意思，請問你是 Origin 出版社的 Tonya 嗎？</div>
+    </div>
+    <div class="line"><span class="role">T:</span> Yes. I'm Tonya from Origin Publishers.
+      <div class="line-zh"><span class="role">T：</span>是的，我是 Origin 出版社的 Tonya。</div>
+    </div>
+    <div class="line"><span class="role">J:</span> It's nice to finally meet you. I'm Joseph. May I help you with your <span class="vocab-mark" data-num="2" data-cn="行李（不可數）" tabindex="0">luggage</span>?
+      <div class="line-zh"><span class="role">J：</span>很高興終於見到你。我是 Joseph。我可以幫你拿行李嗎？</div>
+    </div>
+    <div class="line"><span class="role">T:</span> Yes, please. Thanks for <span class="phrase-mark">giving me a hand</span>, Joseph.
+      <div class="line-zh"><span class="role">T：</span>好的，麻煩你了。謝謝你幫我一把，Joseph。</div>
+    </div>
+    <div class="line"><span class="role">J:</span> It's no problem. So, how was your <span class="vocab-mark" data-num="3" data-cn="飛行；班機" tabindex="0">flight</span>? I hope you had a <span class="vocab-mark" data-num="4" data-cn="愉快的；舒適的" tabindex="0">pleasant</span> trip.
+      <div class="line-zh"><span class="role">J：</span>沒問題。對了，你的飛行旅程如何？希望你有個愉快的旅程。</div>
+    </div>
+    <div class="line"><span class="role">T:</span> It was OK. The food didn't <span class="vocab-mark" data-num="5" data-cn="嚐起來；味道" tabindex="0">taste</span> very good, but I think that's <span class="vocab-mark" data-num="6" data-cn="正常的" tabindex="0">normal</span> for food served on an <span class="vocab-mark" data-num="7" data-cn="飛機" tabindex="0">airplane</span>.
+      <div class="line-zh"><span class="role">T：</span>還可以。食物不太好吃，不過我想飛機上供應的食物大概都這樣。</div>
+    </div>
+    <div class="line"><span class="role">J:</span> That's true. Did you get to watch any movies?
+      <div class="line-zh"><span class="role">J：</span>沒錯。你有看任何電影嗎？</div>
+    </div>
+    <div class="line"><span class="role">T:</span> No. I slept most of the time. Traveling always makes me tired.
+      <div class="line-zh"><span class="role">T：</span>沒有。我大部分時間都在睡覺。旅行總是讓我覺得很累。</div>
+    </div>
+    <div class="line"><span class="role">J:</span> With such a long trip, that's not <span class="vocab-mark" data-num="8" data-cn="令人驚訝的" tabindex="0">surprising</span>. Well, we could go if you're ready. We have a car outside waiting to take us to your hotel.
+      <div class="line-zh"><span class="role">J：</span>這麼長的旅程，這也不意外。如果你準備好了，我們就可以出發。外面有車在等我們，會載我們去你的飯店。</div>
+    </div>
+    <div class="line"><span class="role">T:</span> Great. I'd like to <span class="phrase-mark">put all my stuff away</span> and <span class="vocab-mark" data-num="9" data-cn="放鬆" tabindex="0">relax</span> <span class="phrase-mark">for a bit</span>.
+      <div class="line-zh"><span class="role">T：</span>太好了。我想把我的東西放好，稍微休息一下。</div>
+    </div>
+  </div>
+
+  <h2 class="section-title"><span class="num">II.</span> 重要單字</h2>
+  <div class="vocab-table-wrap">
+  <table class="vocab-table">
+    <thead><tr><th>單字</th><th>KK音標</th><th>詞性</th><th>中文</th><th>變化型 / 同反義字</th></tr></thead>
+    <tbody>
+      <tr><td><span class="word">publisher</span></td><td><span class="ipa">[ˈpʌblɪʃɚ]</span></td><td><span class="pos">n.</span></td><td>出版商</td><td>複 publishers ／ 同 press</td></tr>
+      <tr><td><span class="word">luggage</span> ⭐</td><td><span class="ipa">[ˈlʌɡɪdʒ]</span></td><td><span class="pos">n.</span></td><td>行李</td><td><span class="hl-rust">不可數！永遠單數</span> ／ 同 baggage</td></tr>
+      <tr><td><span class="word">flight</span></td><td><span class="ipa">[flaɪt]</span></td><td><span class="pos">n.</span></td><td>飛行；班機</td><td>複 flights ／ 同 trip, journey</td></tr>
+      <tr><td><span class="word">pleasant</span></td><td><span class="ipa">[ˈplɛzn̩t]</span></td><td><span class="pos">adj.</span></td><td>愉快的；舒適的</td><td>同 enjoyable, nice ／ 反 unpleasant</td></tr>
+      <tr><td><span class="word">taste</span></td><td><span class="ipa">[test]</span></td><td><span class="pos">v.</span></td><td>嚐起來；味道</td><td>tasted / tasted / tasting</td></tr>
+      <tr><td><span class="word">normal</span></td><td><span class="ipa">[ˈnɔrml̩]</span></td><td><span class="pos">adj.</span></td><td>正常的</td><td>同 usual, regular ／ 反 abnormal</td></tr>
+      <tr><td><span class="word">airplane</span></td><td><span class="ipa">[ˈɛrˌplen]</span></td><td><span class="pos">n.</span></td><td>飛機</td><td>複 airplanes ／ 同 plane, aircraft</td></tr>
+      <tr><td><span class="word">surprising</span></td><td><span class="ipa">[sɚˈpraɪzɪŋ]</span></td><td><span class="pos">adj.</span></td><td>令人驚訝的</td><td>同 amazing ／ 反 expected</td></tr>
+      <tr><td><span class="word">relax</span></td><td><span class="ipa">[rɪˈlæks]</span></td><td><span class="pos">v.</span></td><td>放鬆</td><td>relaxed / relaxed / relaxing ／ 同 rest</td></tr>
+      <tr><td><span class="word">client</span></td><td><span class="ipa">[ˈklaɪənt]</span></td><td><span class="pos">n.</span></td><td>客戶</td><td>複 clients ／ 同 customer</td></tr>
+      <tr><td><span class="word">aisle</span> ⭐</td><td><span class="ipa">[aɪl]</span></td><td><span class="pos">n.</span></td><td>走道</td><td><span class="hl-rust">s 不發音！冠詞用 an</span></td></tr>
+      <tr><td><span class="word">coach</span></td><td><span class="ipa">[kotʃ]</span></td><td><span class="pos">n.</span></td><td>經濟艙</td><td>= economy class</td></tr>
+      <tr><td><span class="word">purchase</span></td><td><span class="ipa">[ˈpɝtʃəs]</span></td><td><span class="pos">v.</span></td><td>購買</td><td>同 buy（老師：like = purchase = buy）</td></tr>
+      <tr><td><span class="word">stuff</span></td><td><span class="ipa">[stʌf]</span></td><td><span class="pos">n.</span></td><td>東西（口語）</td><td><span class="hl-rust">不可數</span> ／ 同 things</td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <h2 class="section-title"><span class="num">III.</span> 重要片語</h2>
+  <ul class="phrase-list">
+    <li class="phrase-item">
+      <span class="ph">pick up</span><span class="ph-cn">接（某人）</span>
+      <span class="ph-note">受詞為代名詞時必須放中間：pick him up（O）／pick up him（X）</span>
+      <span class="ph-ex">Joseph is at the airport to <strong>pick up</strong> a client.</span>
+    </li>
+    <li class="phrase-item">
+      <span class="ph">give sb a hand</span><span class="ph-cn">幫某人一把</span>
+      <span class="ph-note">= help sb；結構：give + 人 + a hand</span>
+      <span class="ph-ex">Thanks for <strong>giving me a hand</strong>, Joseph.</span>
+    </li>
+    <li class="phrase-item">
+      <span class="ph">put . . . away</span><span class="ph-cn">把……收起來</span>
+      <span class="ph-note">受詞為代名詞時須放中間：put it away（O）</span>
+      <span class="ph-ex">I'd like to <strong>put all my stuff away</strong>.</span>
+    </li>
+    <li class="phrase-item">
+      <span class="ph">for a bit</span><span class="ph-cn">一下子；一會兒</span>
+      <span class="ph-note">= for a while / for a moment</span>
+      <span class="ph-ex">I'd like to relax <strong>for a bit</strong>.</span>
+    </li>
+    <li class="phrase-item">
+      <span class="ph">would you mind + V-ing</span><span class="ph-cn">你介意……嗎？ ⭐⭐⭐</span>
+      <span class="ph-note"><span class="hl-rust">mind 後面只能接動名詞 (V-ing)，絕對不可接不定詞！</span></span>
+      <span class="ph-ex"><strong>Would you mind helping</strong> me with my luggage?</span>
+    </li>
+  </ul>
+
+  <h2 class="section-title"><span class="num">IV.</span> 文法重點</h2>
+  <div class="grammar-pt">
+    <div class="pt-title">1. <span class="star">⭐⭐⭐</span> mind + V-ing（介意做某事）</div>
+    <div class="pt-content">
+      ❌ Would you mind <strong>to help</strong> me?（錯）<br>
+      ⭕ Would you mind <strong>helping</strong> me?（對）<br>
+      回答：不介意 → <code>No, not at all.</code> / 介意 → <code>Sorry, I can't.</code>
+    </div>
+  </div>
+  <div class="grammar-pt">
+    <div class="pt-title">2. 過去式否定 <code>didn't + 原形動詞</code></div>
+    <div class="pt-content">
+      The food <strong>didn't taste</strong> very good.（didn't 後動詞要回原形，不可寫 didn't tasted）
+    </div>
+  </div>
+  <div class="grammar-pt">
+    <div class="pt-title">3. 動名詞當主詞 → 動詞用單數</div>
+    <div class="pt-content">
+      <strong>Traveling</strong> always <strong>makes</strong> me tired.（不是 make）<br>
+      規則：V-ing 當主詞時，動詞用單數。
+    </div>
+  </div>
+  <div class="grammar-pt">
+    <div class="pt-title">4. <code>such + a + adj. + N</code> 的用法</div>
+    <div class="pt-content">With <strong>such a long trip</strong>, that's not surprising.</div>
+  </div>
+  <div class="grammar-pt">
+    <div class="pt-title">5. 不可數名詞：luggage / food / stuff / baggage</div>
+    <div class="pt-content">這些字沒有複數形，不可加 s，前面也不加 a/an。</div>
+  </div>
+  <div class="grammar-pt">
+    <div class="pt-title">6. <code>by + 交通工具</code>（不加冠詞）</div>
+    <div class="pt-content">by plane / by car / by taxi ⭕　　by a plane ❌</div>
+  </div>
+
+  <div class="teacher-note">
+    <div class="tn-content">
+      <strong>📌 老師強調的紅色警示考點：</strong><br>
+      ① <span class="hl-rust">luggage 永遠是單數！</span>（不可數名詞，沒有複數形）<br>
+      ② <span class="hl-rust">like = purchase = buy</span>（三個動詞同義）<br>
+      ③ <span class="hl-rust">aisle 的「s」不發音</span>，且冠詞用 <code>an</code>（an aisle seat）<br>
+      ④ <span class="hl-rust">mind + V-ing</span>（老師在課本上圈起來強調）
+    </div>
+  </div>
+</section>
+
+
+<!-- ================================================== -->
+<!--                    PART B VIEW                     -->
+<!-- ================================================== -->
+<section class="view" id="view-partB">
+  <h1 class="lesson-title" style="font-size:2.4rem">Part B · Accommodation<span class="ch">飯店入住</span></h1>
+
+  <h2 class="section-title"><span class="num">I.</span> 英文原文＋逐句翻譯</h2>
+
+  <div class="card card-warm" style="margin-bottom:14px">
+    <strong>聽力填空選項：</strong><br>
+    A. That's fine with me.　B. That sounds good.　C. Here you go.　D. Thank you very much.
+  </div>
+
+  <div class="dialogue">
+    <p style="font-style:italic;color:var(--ink-soft);margin-bottom:14px">Joseph is helping Tonya <span class="phrase-mark">check in</span> at the hotel.<br>
+    <strong>R:</strong> Receptionist　<strong>J:</strong> Joseph　<strong>T:</strong> Tonya</p>
+    <div class="intro-zh"><em>Joseph 在幫 Tonya 辦理飯店入住。</em></div>
+    <div class="line"><span class="role">R:</span> Welcome to Royal <span class="vocab-mark" data-num="1" data-cn="旅館" tabindex="0">Inn</span>. How can I help you?
+      <div class="line-zh"><span class="role">R：</span>歡迎光臨皇家旅館。有什麼我可以幫忙的嗎？</div>
+    </div>
+    <div class="line"><span class="role">J:</span> Hello. This is Ms. Tonya Hoffman, and she would like to check in.
+      <div class="line-zh"><span class="role">J：</span>你好。這位是 Tonya Hoffman 小姐，她要辦理入住。</div>
+    </div>
+    <div class="line"><span class="role">R:</span> Good afternoon, Ms. Hoffman. I'll just need to see your <span class="vocab-mark" data-num="2" data-cn="護照" tabindex="0">passport</span>.
+      <div class="line-zh"><span class="role">R：</span>午安，Hoffman 小姐。我需要看一下您的護照。</div>
+    </div>
+    <div class="line"><span class="role">T:</span> <span class="fill-answer">Here you go.</span> <span class="stage">(hands over passport)</span>
+      <div class="line-zh"><span class="role">T：</span><span class="fill-answer">拿去吧。</span>（遞出護照）</div>
+    </div>
+    <div class="line"><span class="role">R:</span> All right. And how will you be paying for the room?
+      <div class="line-zh"><span class="role">R：</span>好的。請問您要怎麼支付房費？</div>
+    </div>
+    <div class="line"><span class="role">J:</span> All the <span class="vocab-mark" data-num="3" data-cn="費用；收費" tabindex="0">charges</span> should go on my company credit card. <span class="stage">(hands over credit card)</span>
+      <div class="line-zh"><span class="role">J：</span>所有費用都記在我的公司信用卡上。（遞出信用卡）</div>
+    </div>
+    <div class="line"><span class="role">R:</span> OK. You are in room 16-G. Here is your key card. The <span class="vocab-mark" data-num="4" data-cn="電梯" tabindex="0">elevators</span> are to your left.
+      <div class="line-zh"><span class="role">R：</span>好的。您的房間是 16-G。這是您的房卡。電梯在您的左手邊。</div>
+    </div>
+    <div class="line"><span class="role">T:</span> <span class="fill-answer">Thank you very much.</span>
+      <div class="line-zh"><span class="role">T：</span><span class="fill-answer">非常感謝你。</span></div>
+    </div>
+    <div class="line"><span class="role">J:</span> <span class="phrase-mark">Now that</span> you are checked in, I'll leave you here <span class="phrase-mark">for a while</span>. How about I pick you up at 6:00 for dinner?
+      <div class="line-zh"><span class="role">J：</span>既然你已經辦好入住手續了，我就先讓你休息一下。我六點來接你吃晚餐如何？</div>
+    </div>
+    <div class="line"><span class="role">T:</span> Sure. <span class="fill-answer">That sounds good.</span>
+      <div class="line-zh"><span class="role">T：</span>好的。<span class="fill-answer">聽起來不錯。</span></div>
+    </div>
+    <div class="line"><span class="role">J:</span> And tomorrow we'll do the company tour. Will 9:00 a.m. be OK?
+      <div class="line-zh"><span class="role">J：</span>然後明天我們要參觀公司。早上九點可以嗎？</div>
+    </div>
+    <div class="line"><span class="role">T:</span> <span class="fill-answer">That's fine with me.</span>
+      <div class="line-zh"><span class="role">T：</span><span class="fill-answer">我沒問題。</span></div>
+    </div>
+  </div>
+
+  <h2 class="section-title"><span class="num">II.</span> 重要單字</h2>
+  <div class="vocab-table-wrap">
+  <table class="vocab-table">
+    <thead><tr><th>單字</th><th>KK音標</th><th>詞性</th><th>中文</th><th>變化型 / 同反義字</th></tr></thead>
+    <tbody>
+      <tr><td><span class="word">inn</span></td><td><span class="ipa">[ɪn]</span></td><td><span class="pos">n.</span></td><td>旅館（小型）</td><td>複 inns ／ 同 hotel</td></tr>
+      <tr><td><span class="word">passport</span></td><td><span class="ipa">[ˈpæsˌpɔrt]</span></td><td><span class="pos">n.</span></td><td>護照</td><td>複 passports</td></tr>
+      <tr><td><span class="word">charge</span></td><td><span class="ipa">[tʃɑrdʒ]</span></td><td><span class="pos">n.</span></td><td>費用；收費</td><td>複 charges ／ 同 fee, cost</td></tr>
+      <tr><td><span class="word">elevator</span></td><td><span class="ipa">[ˈɛləˌvetɚ]</span></td><td><span class="pos">n.</span></td><td>電梯</td><td>複 elevators ／ 同 lift（英式）／ 反 stairs</td></tr>
+      <tr><td><span class="word">receptionist</span></td><td><span class="ipa">[rɪˈsɛpʃənɪst]</span></td><td><span class="pos">n.</span></td><td>接待員</td><td>複 receptionists</td></tr>
+      <tr><td><span class="word">accommodation</span></td><td><span class="ipa">[əˌkɑməˈdeʃən]</span></td><td><span class="pos">n.</span></td><td>住宿</td><td>同 lodging, housing</td></tr>
+      <tr><td><span class="word">while</span></td><td><span class="ipa">[hwaɪl]</span></td><td><span class="pos">n.</span></td><td>一會兒</td><td>同 moment, period</td></tr>
+      <tr><td><span class="word">badge</span> ⭐</td><td><span class="ipa">[bædʒ]</span></td><td><span class="pos">n.</span></td><td>識別證；徽章</td><td><span class="hl-rust">老師補充字</span> ／ 同 ID, name tag</td></tr>
+      <tr><td><span class="word">business card</span></td><td><span class="ipa">—</span></td><td><span class="pos">n.</span></td><td>名片</td><td>= name card</td></tr>
+      <tr><td><span class="word">cash</span></td><td><span class="ipa">[kæʃ]</span></td><td><span class="pos">n.</span></td><td>現金</td><td>不可數 ／ 反 credit card</td></tr>
+      <tr><td><span class="word">vacation</span></td><td><span class="ipa">[veˈkeʃən]</span></td><td><span class="pos">n.</span></td><td>假期</td><td>同 holiday ／ 反 work</td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <h2 class="section-title"><span class="num">III.</span> 重要片語</h2>
+  <ul class="phrase-list">
+    <li class="phrase-item">
+      <span class="ph">check in</span><span class="ph-cn">辦理入住／報到</span>
+      <span class="ph-note">反義為 check out（退房）；<span class="hl-rust">老師補充：也用於圖書館借還書</span></span>
+      <span class="ph-ex">She would like to <strong>check in</strong>.</span>
+    </li>
+    <li class="phrase-item">
+      <span class="ph">hand over</span><span class="ph-cn">交出；遞給</span>
+      <span class="ph-note">hand + 受詞 + over（可分）</span>
+      <span class="ph-ex">Can you please <strong>hand over</strong> your ID?</span>
+    </li>
+    <li class="phrase-item">
+      <span class="ph">now that + 子句</span><span class="ph-cn">既然……</span>
+      <span class="ph-note">連接詞，後面接完整句子</span>
+      <span class="ph-ex"><strong>Now that</strong> you are checked in, I'll leave you here.</span>
+    </li>
+    <li class="phrase-item">
+      <span class="ph">for a while</span><span class="ph-cn">一段時間</span>
+      <span class="ph-note">for + 時間長度</span>
+      <span class="ph-ex">I'll leave you here <strong>for a while</strong>.</span>
+    </li>
+    <li class="phrase-item">
+      <span class="ph">How about + N／子句 ?</span><span class="ph-cn">……如何？</span>
+      <span class="ph-note">提議用語</span>
+      <span class="ph-ex"><strong>How about</strong> I pick you up at 6:00?</span>
+    </li>
+    <li class="phrase-item">
+      <span class="ph">punch in / punch out</span><span class="ph-cn">上班打卡／下班打卡 ⭐</span>
+      <span class="ph-note"><span class="hl-rust">老師補充的職場片語</span></span>
+      <span class="ph-ex">Workers must <strong>punch in</strong> before 9 a.m.</span>
+    </li>
+  </ul>
+
+  <h2 class="section-title"><span class="num">IV.</span> 文法重點</h2>
+  <div class="grammar-pt">
+    <div class="pt-title">1. <code>Now that + 子句</code>（既然……）</div>
+    <div class="pt-content">
+      <strong>Now that</strong> you are checked in, I'll leave you here for a while.<br>
+      結構：Now that + 完整子句，表「既然……（那就……）」
+    </div>
+  </div>
+  <div class="grammar-pt">
+    <div class="pt-title">2. 未來進行式 <code>will be + V-ing</code></div>
+    <div class="pt-content">
+      How <strong>will you be paying</strong> for the room?<br>
+      （= How will you pay for the room? 但較禮貌）
+    </div>
+  </div>
+  <div class="grammar-pt">
+    <div class="pt-title">3. 條件句 <code>If + 現在式, 主詞 + will . . .</code></div>
+    <div class="pt-content">
+      <strong>If</strong> you don't have your passport, you <strong>won't be</strong> allowed on the plane.<br>
+      規則：If 子句用現在式，主句用未來式。
+    </div>
+  </div>
+  <div class="grammar-pt">
+    <div class="pt-title">4. 比較級 + than</div>
+    <div class="pt-content">Using the stairs is <strong>healthier than</strong> taking the elevator.</div>
+  </div>
+  <div class="grammar-pt">
+    <div class="pt-title">5. 四個社交回應用語（必背）</div>
+    <div class="pt-content">
+      <strong>Here you go.</strong> → 遞東西時說<br>
+      <strong>Thank you very much.</strong> → 收到東西／服務時說<br>
+      <strong>That sounds good.</strong> → 同意提議時說<br>
+      <strong>That's fine with me.</strong> → 對時間／安排沒意見時說
+    </div>
+  </div>
+  <div class="grammar-pt">
+    <div class="pt-title">6. <code>Ms. / Mr. / Mrs. / Miss</code> 稱謂區別</div>
+    <div class="pt-content">
+      Ms. → 女士（不分婚姻）　　Mrs. → 太太（已婚）<br>
+      Miss → 小姐（未婚）　　Mr. → 先生
+    </div>
+  </div>
+
+  <div class="teacher-note">
+    <div class="tn-content">
+      <strong>📌 老師補充重點：</strong><br>
+      ① <span class="hl-rust">badge</span>（識別證）— 與 passport / ID 相關概念<br>
+      ② <span class="hl-rust">punch in / punch out</span>（上班／下班打卡）— 職場必備用語<br>
+      ③ <span class="hl-rust">check in</span> 在圖書館也表示「借還書」<br>
+      ④ <span class="hl-rust">To Whom It May Concern → 敬啟者</span>（商業書信開頭）<br>
+      ⑤ <span class="hl-rust">Sincerely → 敬上</span>（商業書信結尾）
+    </div>
+  </div>
+</section>
+
+
+<!-- ================================================== -->
+<!--                    PART C VIEW                     -->
+<!-- ================================================== -->
+<section class="view" id="view-partC">
+  <h1 class="lesson-title" style="font-size:2.4rem">Part C · A Company Tour<span class="ch">公司參訪</span></h1>
+
+  <h2 class="section-title"><span class="num">I.</span> 英文原文＋逐句翻譯</h2>
+
+  <div class="card card-warm" style="margin-bottom:14px">
+    <strong>聽力填空選項：</strong><br>
+    A. in charge of　B. meeting　C. on the agenda　D. pleasant
+  </div>
+
+  <div class="dialogue">
+    <p style="font-style:italic;color:var(--ink-soft);margin-bottom:14px">Joseph takes Tonya on a tour of his company.<br>
+    <strong>J:</strong> Joseph　<strong>T:</strong> Tonya　<strong>M:</strong> Megan　<strong>S:</strong> Sam</p>
+    <div class="intro-zh"><em>Joseph 帶 Tonya 參觀他的公司。</em></div>
+    <div class="line"><span class="role">J:</span> Welcome, Tonya. I hope you had a <span class="fill-answer">pleasant</span> evening.
+      <div class="line-zh"><span class="role">J：</span>歡迎你，Tonya。希望你昨晚過得 <span class="fill-answer">愉快</span>。</div>
+    </div>
+    <div class="line"><span class="role">T:</span> I did. Thank you very much. What's <span class="fill-answer">on the agenda</span> for today?
+      <div class="line-zh"><span class="role">T：</span>是的，非常感謝你。今天 <span class="fill-answer">的行程</span>是什麼？</div>
+    </div>
+    <div class="line"><span class="role">J:</span> I'm going to <span class="phrase-mark">show you around</span> the office and introduce you to some important people here.
+      <div class="line-zh"><span class="role">J：</span>我要帶你參觀辦公室，並介紹一些重要的人給你認識。</div>
+    </div>
+    <div class="line"><span class="role">T:</span> Great. I'm looking forward to <span class="fill-answer">meeting</span> your coworkers.
+      <div class="line-zh"><span class="role">T：</span>太好了。我很期待 <span class="fill-answer">認識</span>你的同事們。</div>
+    </div>
+    <div class="line"><span class="role">J:</span> This is Megan. She's Mr. Jackson's <span class="vocab-mark" data-num="1" data-cn="秘書" tabindex="0">secretary</span>, so when you call the CEO's office, you'll talk to her first.
+      <div class="line-zh"><span class="role">J：</span>這位是 Megan。她是 Jackson 先生的秘書，所以當你打電話到執行長辦公室時，你會先和她說話。</div>
+    </div>
+    <div class="line"><span class="role">T:</span> I think I've talked to you before. It's nice to meet you <span class="vocab-mark" data-num="2" data-cn="面對面地" tabindex="0">face-to-face</span>.
+      <div class="line-zh"><span class="role">T：</span>我想我們之前通過電話。很高興能跟你面對面見面。</div>
+    </div>
+    <div class="line"><span class="role">M:</span> It's nice to finally meet you, too.
+      <div class="line-zh"><span class="role">M：</span>我也很高興終於見到你。</div>
+    </div>
+    <div class="line"><span class="role">J:</span> And this is Sam. He's <span class="fill-answer">in charge of</span> <span class="vocab-mark" data-num="3" data-cn="會計" tabindex="0">accounting</span>. He'll <span class="phrase-mark">go over</span> the details of your company's account with us this afternoon.
+      <div class="line-zh"><span class="role">J：</span>這位是 Sam。他 <span class="fill-answer">負責</span>會計事務。他下午會跟我們仔細討論你們公司帳戶的細節。</div>
+    </div>
+    <div class="line"><span class="role">T:</span> Pleased to meet you.
+      <div class="line-zh"><span class="role">T：</span>很高興認識你。</div>
+    </div>
+    <div class="line"><span class="role">S:</span> Glad to meet you, too. After we finish our business, I'd like to take you to one of my <span class="vocab-mark" data-num="4" data-cn="最喜愛的" tabindex="0">favorite</span> restaurants for lunch.
+      <div class="line-zh"><span class="role">S：</span>我也很高興認識你。等我們忙完業務後，我想帶你去我最愛的一家餐廳吃午餐。</div>
+    </div>
+    <div class="line"><span class="role">T:</span> That sounds like fun. I'd love to <span class="phrase-mark">try out</span> the local food.
+      <div class="line-zh"><span class="role">T：</span>聽起來很有趣。我很想嘗嘗看當地的食物。</div>
+    </div>
+  </div>
+
+  <h2 class="section-title"><span class="num">II.</span> 重要單字</h2>
+  <div class="vocab-table-wrap">
+  <table class="vocab-table">
+    <thead><tr><th>單字</th><th>KK音標</th><th>詞性</th><th>中文</th><th>變化型 / 同反義字</th></tr></thead>
+    <tbody>
+      <tr><td><span class="word">secretary</span></td><td><span class="ipa">[ˈsɛkrəˌtɛrɪ]</span></td><td><span class="pos">n.</span></td><td>秘書</td><td>複 secretaries ／ 同 assistant</td></tr>
+      <tr><td><span class="word">face-to-face</span></td><td><span class="ipa">[fes tə fes]</span></td><td><span class="pos">adv.</span></td><td>面對面地</td><td>連字號連接 ／ 同 in person</td></tr>
+      <tr><td><span class="word">accounting</span></td><td><span class="ipa">[əˈkaʊntɪŋ]</span></td><td><span class="pos">n.</span></td><td>會計</td><td>不可數 ／ accountant = 會計師（人）</td></tr>
+      <tr><td><span class="word">favorite</span></td><td><span class="ipa">[ˈfevərɪt]</span></td><td><span class="pos">adj.</span></td><td>最喜愛的</td><td>同 preferred ／ 反 least favorite</td></tr>
+      <tr><td><span class="word">agenda</span></td><td><span class="ipa">[əˈdʒɛndə]</span></td><td><span class="pos">n.</span></td><td>議程</td><td>複 agendas ／ 同 schedule, plan</td></tr>
+      <tr><td><span class="word">coworker</span></td><td><span class="ipa">[ˈkoˌwɝkɚ]</span></td><td><span class="pos">n.</span></td><td>同事</td><td>複 coworkers ／ 同 colleague</td></tr>
+      <tr><td><span class="word">CEO</span></td><td><span class="ipa">—</span></td><td><span class="pos">n.</span></td><td>執行長</td><td>= Chief Executive Officer</td></tr>
+      <tr><td><span class="word">CFO</span></td><td><span class="ipa">—</span></td><td><span class="pos">n.</span></td><td>財務長</td><td>= Chief Financial Officer</td></tr>
+      <tr><td><span class="word">COO</span></td><td><span class="ipa">—</span></td><td><span class="pos">n.</span></td><td>營運長</td><td>= Chief Operating Officer</td></tr>
+      <tr><td><span class="word">VP</span></td><td><span class="ipa">—</span></td><td><span class="pos">n.</span></td><td>副總裁</td><td>= Vice President</td></tr>
+      <tr><td><span class="word">PM</span></td><td><span class="ipa">—</span></td><td><span class="pos">n.</span></td><td>專案經理</td><td>= Project Manager</td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <h2 class="section-title"><span class="num">III.</span> 重要片語</h2>
+  <ul class="phrase-list">
+    <li class="phrase-item">
+      <span class="ph">show sb around</span><span class="ph-cn">帶某人參觀</span>
+      <span class="ph-note">show + 人 + around + 地點</span>
+      <span class="ph-ex">I'm going to <strong>show you around</strong> the office.</span>
+    </li>
+    <li class="phrase-item">
+      <span class="ph">look forward to + V-ing</span><span class="ph-cn">期待…… ⭐⭐⭐</span>
+      <span class="ph-note"><span class="hl-rust">to 是介系詞，後面要接動名詞 (V-ing)，不是不定詞！</span></span>
+      <span class="ph-ex">I'm <strong>looking forward to meeting</strong> your coworkers.</span>
+    </li>
+    <li class="phrase-item">
+      <span class="ph">be in charge of</span><span class="ph-cn">負責……</span>
+      <span class="ph-note">of 後面接名詞或動名詞</span>
+      <span class="ph-ex">He's <strong>in charge of</strong> accounting.</span>
+    </li>
+    <li class="phrase-item">
+      <span class="ph">go over</span><span class="ph-cn">仔細檢視；說明</span>
+      <span class="ph-note">go + over（不可分）</span>
+      <span class="ph-ex">He'll <strong>go over</strong> the details with us.</span>
+    </li>
+    <li class="phrase-item">
+      <span class="ph">try out</span><span class="ph-cn">試用；嘗試</span>
+      <span class="ph-note">try + 受詞 + out</span>
+      <span class="ph-ex">I'd love to <strong>try out</strong> the local food.</span>
+    </li>
+    <li class="phrase-item">
+      <span class="ph">would rather + V₁ + than + V₂</span><span class="ph-cn">寧可……也不願…… ⭐</span>
+      <span class="ph-note">rather 與 than 之後都接原形動詞</span>
+      <span class="ph-ex">I <strong>would rather</strong> talk face-to-face <strong>than</strong> talk on the phone.</span>
+    </li>
+  </ul>
+
+  <h2 class="section-title"><span class="num">IV.</span> 文法重點</h2>
+  <div class="grammar-pt">
+    <div class="pt-title">1. <span class="star">⭐⭐⭐</span> look forward to + V-ing（期待……）</div>
+    <div class="pt-content">
+      ❌ I'm looking forward to <strong>meet</strong> you.（錯）<br>
+      ⭕ I'm looking forward to <strong>meeting</strong> you.（對）<br>
+      📌 關鍵：這裡的 <code>to</code> 是<strong>介系詞</strong>，不是不定詞，所以後面要接動名詞！
+    </div>
+  </div>
+  <div class="grammar-pt">
+    <div class="pt-title">2. let + 受詞 + 原形動詞（使役動詞）</div>
+    <div class="pt-content">
+      <strong>Let me take</strong> you to the car.<br>
+      let 後面接原形動詞（不加 to）；類似動詞：make / have
+    </div>
+  </div>
+  <div class="grammar-pt">
+    <div class="pt-title">3. be terrible at + N／V-ing（在……方面很差）</div>
+    <div class="pt-content">
+      I'm <strong>terrible at</strong> math.<br>
+      反義：be good at（擅長）
+    </div>
+  </div>
+  <div class="grammar-pt">
+    <div class="pt-title">4. one of + 複數名詞</div>
+    <div class="pt-content"><strong>one of my favorite restaurants</strong>（不能用 restaurant 單數）</div>
+  </div>
+  <div class="grammar-pt">
+    <div class="pt-title">5. sound like + N / sound + adj.</div>
+    <div class="pt-content">
+      That <strong>sounds like fun</strong>.（fun 是名詞）<br>
+      That <strong>sounds good</strong>.（good 是形容詞）
+    </div>
+  </div>
+  <div class="grammar-pt">
+    <div class="pt-title">6. CEO / CFO / COO / VP / PM 職稱縮寫</div>
+    <div class="pt-content">
+      Chief <strong>E</strong>xecutive Officer = 執行長<br>
+      Chief <strong>F</strong>inancial Officer = 財務長<br>
+      Chief <strong>O</strong>perating Officer = 營運長<br>
+      <strong>V</strong>ice <strong>P</strong>resident = 副總裁<br>
+      <strong>P</strong>roject <strong>M</strong>anager = 專案經理
+    </div>
+  </div>
+
+  <div class="teacher-note">
+    <div class="tn-content">
+      <strong>📌 Part C 必考重點：</strong><br>
+      ① <span class="hl-rust">look forward to + V-ing</span>（to 是介系詞！）<br>
+      ② <span class="hl-rust">be in charge of</span>（負責……）<br>
+      ③ <span class="hl-rust">CEO / CFO / COO / VP / PM</span> 五大職稱縮寫（商業英文必背）<br>
+      ④ <span class="hl-rust">would rather . . . than . . .</span>（寧可……也不願……）
+    </div>
+  </div>
+</section>
+
+
+<!-- ================================================== -->
+<!--                    PART D VIEW                     -->
+<!-- ================================================== -->
+<section class="view" id="view-partD">
+  <h1 class="lesson-title" style="font-size:2.4rem">Part D · Showing Hospitality<span class="ch">接待款待</span></h1>
+
+  <h2 class="section-title"><span class="num">I.</span> 英文原文＋逐句翻譯</h2>
+
+  <div class="card card-warm" style="margin-bottom:14px">
+    <strong>聽力填空選項：</strong><br>
+    A. Don't worry.　B. No, I haven't.　C. Thanks for telling me.　D. That would be great.
+  </div>
+
+  <div class="dialogue">
+    <p style="font-style:italic;color:var(--ink-soft);margin-bottom:14px">Sam takes Tonya to a restaurant, and then Joseph helps her buy <span class="vocab-mark" data-num="1" data-cn="紀念品" tabindex="0">souvenirs</span>.<br>
+    <strong>S:</strong> Sam　<strong>T:</strong> Tonya　<strong>J:</strong> Joseph</p>
+    <div class="intro-zh"><em>Sam 帶 Tonya 去餐廳，然後 Joseph 幫她買紀念品。</em></div>
+    <p style="font-weight:600;color:var(--rust);margin-top:14px">I. 餐廳場景</p>
+    <div class="scene-zh">I. 餐廳場景</div>
+    <div class="line"><span class="role">S:</span> Have you ever had this kind of food before?
+      <div class="line-zh"><span class="role">S：</span>你以前吃過這種食物嗎？</div>
+    </div>
+    <div class="line"><span class="role">T:</span> <span class="fill-answer">No, I haven't.</span> But I'm really looking forward to it.
+      <div class="line-zh"><span class="role">T：</span><span class="fill-answer">不，我沒有。</span>不過我真的很期待。</div>
+    </div>
+    <div class="line"><span class="role">S:</span> I want to make this lunch <span class="phrase-mark">worth your while</span>, so I'll make sure to get you something <span class="vocab-mark" data-num="2" data-cn="美味的" tabindex="0">delicious</span>. Is there anything you don't like to eat?
+      <div class="line-zh"><span class="role">S：</span>我想讓你這頓午餐物超所值，所以我會確保點一些好吃的給你。有什麼你不喜歡吃的嗎？</div>
+    </div>
+    <div class="line"><span class="role">T:</span> I don't like very <span class="vocab-mark" data-num="3" data-cn="辣的" tabindex="0">spicy</span> food.
+      <div class="line-zh"><span class="role">T：</span>我不喜歡太辣的食物。</div>
+    </div>
+    <div class="line"><span class="role">S:</span> OK. And do you <strong>prefer</strong> chicken <strong>or</strong> beef?
+      <div class="line-zh"><span class="role">S：</span>好的。那你比較喜歡雞肉還是牛肉？</div>
+    </div>
+    <div class="line"><span class="role">T:</span> <strong>Either</strong> is fine with me.
+      <div class="line-zh"><span class="role">T：</span>都可以。</div>
+    </div>
+
+    <p style="font-weight:600;color:var(--rust);margin-top:20px">II. 市場購物場景</p>
+    <div class="scene-zh">II. 市場購物場景</div>
+    <div class="line"><span class="role">J:</span> Is there anything <span class="phrase-mark">in particular</span> you wanted to see or do today?
+      <div class="line-zh"><span class="role">J：</span>你今天有特別想看或想做什麼嗎？</div>
+    </div>
+    <div class="line"><span class="role">T:</span> I do need to pick up some souvenirs for my family and friends.
+      <div class="line-zh"><span class="role">T：</span>我真的需要買一些紀念品給家人和朋友。</div>
+    </div>
+    <div class="line"><span class="role">J:</span> <span class="phrase-mark">If you're up for</span> it, I could take you to an <span class="vocab-mark" data-num="4" data-cn="戶外的" tabindex="0">outdoor</span> market.
+      <div class="line-zh"><span class="role">J：</span>如果你願意的話，我可以帶你去一個露天市場。</div>
+    </div>
+    <div class="line"><span class="role">T:</span> <span class="fill-answer">That would be great.</span>
+      <div class="line-zh"><span class="role">T：</span><span class="fill-answer">那真是太好了。</span></div>
+    </div>
+    <div class="line"><span class="role">J:</span> All right. Let's go to the market. <span class="phrase-mark">By the way</span>, you are allowed to <span class="vocab-mark" data-num="5" data-cn="便宜貨；議價" tabindex="0">bargain</span> for the items there. No one ever pays the first amount the seller says.
+      <div class="line-zh"><span class="role">J：</span>好的，我們走吧。對了，那裡的東西是可以議價的。沒有人會直接付賣家開的第一個價錢。</div>
+    </div>
+    <div class="line"><span class="role">T:</span> <span class="fill-answer">Thanks for telling me.</span> I'm not very good at bargaining <span class="vocab-mark" data-num="6" data-cn="雖然；不過" tabindex="0">though</span>.
+      <div class="line-zh"><span class="role">T：</span><span class="fill-answer">謝謝你告訴我。</span>不過我不太擅長議價。</div>
+    </div>
+    <div class="line"><span class="role">J:</span> <span class="fill-answer">Don't worry.</span> I'll help you get the best <span class="vocab-mark" data-num="7" data-cn="交易；划算的事" tabindex="0">deal</span>.
+      <div class="line-zh"><span class="role">J：</span><span class="fill-answer">別擔心。</span>我會幫你拿到最好的價錢。</div>
+    </div>
+  </div>
+
+  <h2 class="section-title"><span class="num">II.</span> 重要單字</h2>
+  <div class="vocab-table-wrap">
+  <table class="vocab-table">
+    <thead><tr><th>單字</th><th>KK音標</th><th>詞性</th><th>中文</th><th>變化型 / 同反義字</th></tr></thead>
+    <tbody>
+      <tr><td><span class="word">souvenir</span></td><td><span class="ipa">[ˌsuvəˈnɪr]</span></td><td><span class="pos">n.</span></td><td>紀念品</td><td>複 souvenirs ／ 同 memento</td></tr>
+      <tr><td><span class="word">delicious</span></td><td><span class="ipa">[dɪˈlɪʃəs]</span></td><td><span class="pos">adj.</span></td><td>美味的</td><td>同 tasty, yummy ／ 反 disgusting</td></tr>
+      <tr><td><span class="word">spicy</span></td><td><span class="ipa">[ˈspaɪsɪ]</span></td><td><span class="pos">adj.</span></td><td>辛辣的</td><td>同 hot ／ 反 mild, bland</td></tr>
+      <tr><td><span class="word">outdoor</span></td><td><span class="ipa">[ˈaʊtˌdɔr]</span></td><td><span class="pos">adj.</span></td><td>戶外的；露天的</td><td>同 open-air ／ 反 indoor</td></tr>
+      <tr><td><span class="word">bargain</span></td><td><span class="ipa">[ˈbɑrɡɪn]</span></td><td><span class="pos">v. / n.</span></td><td>議價；划算</td><td>同 haggle, negotiate</td></tr>
+      <tr><td><span class="word">though</span></td><td><span class="ipa">[ðo]</span></td><td><span class="pos">adv.</span></td><td>不過；雖然</td><td>同 however ／ 放句尾</td></tr>
+      <tr><td><span class="word">deal</span></td><td><span class="ipa">[dil]</span></td><td><span class="pos">n.</span></td><td>交易；划算的價格</td><td>複 deals ／ 同 bargain, agreement</td></tr>
+      <tr><td><span class="word">hospitality</span></td><td><span class="ipa">[ˌhɑspɪˈtælətɪ]</span></td><td><span class="pos">n.</span></td><td>款待；好客</td><td>不可數 ／ 反 hostility</td></tr>
+      <tr><td><span class="word">either</span></td><td><span class="ipa">[ˈiðɚ]</span></td><td><span class="pos">pron./adj./adv.</span></td><td>（兩者中）任一</td><td>反 neither</td></tr>
+      <tr><td><span class="word">prefer</span></td><td><span class="ipa">[prɪˈfɝ]</span></td><td><span class="pos">v.</span></td><td>比較喜歡</td><td>同 like better ／ 反 dislike</td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <h2 class="section-title"><span class="num">III.</span> 重要片語</h2>
+  <ul class="phrase-list">
+    <li class="phrase-item">
+      <span class="ph">worth one's while</span><span class="ph-cn">值得；物超所值</span>
+      <span class="ph-ex">Going to graduate school would be <strong>worth your while</strong>.</span>
+    </li>
+    <li class="phrase-item">
+      <span class="ph">in particular</span><span class="ph-cn">特別地</span>
+      <span class="ph-ex">There's nothing <strong>in particular</strong> I want to eat.</span>
+    </li>
+    <li class="phrase-item">
+      <span class="ph">be up for + N／V-ing</span><span class="ph-cn">願意做……</span>
+      <span class="ph-ex">Are you <strong>up for</strong> planning the meeting?</span>
+    </li>
+    <li class="phrase-item">
+      <span class="ph">by the way</span><span class="ph-cn">順帶一提</span>
+      <span class="ph-note">轉換話題用；簡寫 BTW</span>
+      <span class="ph-ex"><strong>By the way</strong>, the meeting is moved to Friday.</span>
+    </li>
+    <li class="phrase-item">
+      <span class="ph">feel like + V-ing</span><span class="ph-cn">想要做……</span>
+      <span class="ph-note"><span class="hl-rust">feel like 後面只接動名詞，不接不定詞！</span></span>
+      <span class="ph-ex">I <strong>feel like eating</strong> pizza tonight.</span>
+    </li>
+  </ul>
+
+  <h2 class="section-title"><span class="num">IV.</span> 文法重點</h2>
+  <div class="grammar-pt">
+    <div class="pt-title">1. <span class="star">⭐⭐⭐</span> either 的三種用法</div>
+    <div class="pt-content">
+      ① <strong>代名詞</strong>：兩者中任一個<br>
+      　　<em>Either is fine with me.</em><br>
+      ② <strong>連接詞</strong>：either A or B（A 或 B）<br>
+      　　<em>We have to choose either this one or that one.</em><br>
+      ③ <strong>副詞</strong>：用於否定句句尾，意為「也」<br>
+      　　<em>I don't know, either.</em>（注意：肯定句的「也」用 too / also）
+    </div>
+  </div>
+  <div class="grammar-pt">
+    <div class="pt-title">2. <span class="star">⭐⭐⭐</span> prefer 的三種用法</div>
+    <div class="pt-content">
+      ① <strong>prefer A or B</strong>（選 A 還是 B？）<br>
+      　　<em>Do you prefer chicken or beef?</em><br>
+      ② <strong>prefer to + V</strong>（比較喜歡做……）<br>
+      　　<em>I prefer to eat out.</em><br>
+      ③ <strong>prefer A to B</strong>（喜歡 A 勝過 B）⭐ 注意：用 to，不是 than！<br>
+      　　<em>Darren prefers French food <span class="hl-rust">to</span> Chinese food.</em>
+    </div>
+  </div>
+  <div class="grammar-pt">
+    <div class="pt-title">3. <span class="star">⭐⭐</span> something + 形容詞（形容詞後置）</div>
+    <div class="pt-content">
+      I'll get you <strong>something delicious</strong>.（不能說 delicious something）<br>
+      規則：something / anything / nothing / everything 後面的形容詞要<strong>放在後面</strong>。
+    </div>
+  </div>
+  <div class="grammar-pt">
+    <div class="pt-title">4. 現在完成式 Have you ever + p.p. + before?</div>
+    <div class="pt-content">
+      <strong>Have you ever had</strong> this food before?<br>
+      肯定答：Yes, I have. ／ 否定答：No, I haven't.
+    </div>
+  </div>
+  <div class="grammar-pt">
+    <div class="pt-title">5. be allowed to + V（被允許）</div>
+    <div class="pt-content">You <strong>are allowed to bargain</strong> for the items.</div>
+  </div>
+  <div class="grammar-pt">
+    <div class="pt-title">6. though 句尾用法（不過、然而）</div>
+    <div class="pt-content">I'm not good at bargaining <strong>though</strong>.（= but / however）</div>
+  </div>
+
+  <div class="teacher-note">
+    <div class="tn-content">
+      <strong>📌 Part D 必考重點：</strong><br>
+      ① <span class="hl-rust">either</span> 三種用法（代名詞 / 連接詞 / 否定句副詞）<br>
+      ② <span class="hl-rust">prefer</span> 三種用法（特別注意 prefer A <strong>to</strong> B，不是 than）<br>
+      ③ <span class="hl-rust">something + 形容詞</span>（形容詞後置）<br>
+      ④ <span class="hl-rust">Have you ever + p.p.</span> → No, I haven't.<br>
+      ⑤ <span class="hl-rust">feel like + V-ing</span>（不接不定詞）
+    </div>
+  </div>
+</section>
+
+<!-- ================================================== -->
+<!--                  KEY POINTS VIEW                   -->
+<!-- ================================================== -->
+<section class="view" id="view-keypoints">
+  <h1 class="lesson-title" style="font-size:2.4rem">考前重點整理<span class="ch">老師強調的必考點</span></h1>
+
+  <h2 class="section-title"><span class="num">①</span> 紅色警示：必考三大句型</h2>
+
+  <div class="kp-box must">
+    <span class="kp-tag">⭐⭐⭐ 必考</span>
+    <h4>mind + V-ing（介意做某事）</h4>
+    <ul>
+      <li>❌ Would you mind <strong>to help</strong> me?（錯）</li>
+      <li>⭕ Would you mind <strong>helping</strong> me?（對）</li>
+      <li>📌 mind 後面<strong>只能接動名詞</strong>，絕對不能接不定詞！</li>
+      <li>回答：<code>No, not at all.</code>（不介意 → 答應幫忙）</li>
+    </ul>
+  </div>
+
+  <div class="kp-box must">
+    <span class="kp-tag">⭐⭐⭐ 必考</span>
+    <h4>look forward to + V-ing（期待……）</h4>
+    <ul>
+      <li>❌ I'm looking forward to <strong>see</strong> you.（錯）</li>
+      <li>⭕ I'm looking forward to <strong>seeing</strong> you.（對）</li>
+      <li>📌 to 在這裡是<strong>介系詞</strong>，不是不定詞！</li>
+      <li>類似句型：be used to + V-ing（習慣於……）</li>
+    </ul>
+  </div>
+
+  <div class="kp-box must">
+    <span class="kp-tag">⭐⭐⭐ 老師紅色警示</span>
+    <h4>luggage 永遠是單數！</h4>
+    <ul>
+      <li>luggage 是<strong>不可數名詞</strong>，沒有複數形</li>
+      <li>❌ luggages（X）／ a luggage（X）／ two luggages（X）</li>
+      <li>⭕ 要表達「兩件行李」用 <code>two pieces of luggage</code> 或 <code>two bags</code></li>
+      <li>類似不可數名詞：baggage、food、stuff、information</li>
+    </ul>
+  </div>
+
+  <h2 class="section-title"><span class="num">②</span> 黃色警示：易混淆句型</h2>
+
+  <div class="kp-box medium">
+    <span class="kp-tag">⭐⭐ 易考</span>
+    <h4>either 的三種用法</h4>
+    <ul>
+      <li>① 代名詞：<em>Either is fine with me.</em>（兩者皆可）</li>
+      <li>② 連接詞：<em>either A or B</em>（A 或 B）</li>
+      <li>③ 副詞（否定句的「也」）：<em>I don't know, either.</em></li>
+      <li>📌 注意：肯定句的「也」用 <code>too / also</code>，否定句才用 <code>either</code>！</li>
+    </ul>
+  </div>
+
+  <div class="kp-box medium">
+    <span class="kp-tag">⭐⭐ 易考</span>
+    <h4>prefer 的三種用法</h4>
+    <ul>
+      <li>① <strong>prefer A or B</strong>：<em>Do you prefer chicken or beef?</em></li>
+      <li>② <strong>prefer to + V</strong>：<em>I prefer to eat out.</em></li>
+      <li>③ <strong>prefer A <span class="hl-rust">to</span> B</strong>：<em>I prefer tea <strong>to</strong> coffee.</em></li>
+      <li>📌 ❌ prefer A <strong>than</strong> B（這是常見錯誤！）</li>
+    </ul>
+  </div>
+
+  <div class="kp-box medium">
+    <span class="kp-tag">⭐⭐ 易考</span>
+    <h4>something / anything + 形容詞</h4>
+    <ul>
+      <li>形容詞要<strong>放在後面</strong>！</li>
+      <li>❌ delicious something（X）</li>
+      <li>⭕ something delicious（O）</li>
+      <li>同類詞：anything spicy / nothing special / everyone present</li>
+    </ul>
+  </div>
+
+  <h2 class="section-title"><span class="num">③</span> 老師額外補充字（課外）</h2>
+
+  <div class="kp-box basic">
+    <span class="kp-tag">⭐ 老師補充</span>
+    <h4>職場英文加分字</h4>
+    <ul>
+      <li><strong>badge</strong> [bædʒ]（識別證、徽章）— 與 passport / ID 同類</li>
+      <li><strong>punch in</strong>（上班打卡）／ <strong>punch out</strong>（下班打卡）</li>
+      <li><strong>check in</strong> 也可用於圖書館借還書</li>
+      <li><strong>like = purchase = buy</strong>（三個動詞同義）</li>
+      <li><strong>aisle</strong> [aɪl] 的「s」<strong>不發音</strong>！冠詞用 <code>an aisle seat</code></li>
+    </ul>
+  </div>
+
+  <div class="kp-box basic">
+    <span class="kp-tag">⭐ 商業書信</span>
+    <h4>商業書信格式</h4>
+    <ul>
+      <li><strong>To Whom It May Concern:</strong> → 敬啟者（不知道收件人是誰時）</li>
+      <li><strong>Dear Sir or Madam,</strong> → 親愛的先生／女士（同義替代）</li>
+      <li><strong>Sincerely,</strong> → 敬上（正式結尾）</li>
+      <li><strong>Yours truly, / Best regards,</strong> → 其他正式結尾用語</li>
+    </ul>
+  </div>
+
+  <h2 class="section-title"><span class="num">④</span> 重要時態總整理</h2>
+
+  <div class="kp-box basic">
+    <span class="kp-tag">時態</span>
+    <h4>本課出現的 6 種時態</h4>
+    <ul>
+      <li><strong>過去式</strong>：<code>The food didn't taste good.</code>（didn't + 原形）</li>
+      <li><strong>現在完成式</strong>：<code>Joseph has arrived.</code>（has/have + p.p.）</li>
+      <li><strong>現在完成進行式</strong>：<code>Kate has been talking for a while.</code></li>
+      <li><strong>未來式</strong>：<code>I'll help you.</code>（will + 原形）</li>
+      <li><strong>未來進行式</strong>：<code>How will you be paying?</code>（will be + V-ing）</li>
+      <li><strong>被動式</strong>：<code>You are allowed to bargain.</code>（be + p.p.）</li>
+    </ul>
+  </div>
+
+  <h2 class="section-title"><span class="num">⑤</span> 五大職稱縮寫</h2>
+
+  <div class="kp-box basic">
+    <span class="kp-tag">職場必備</span>
+    <h4>商業英文職稱（FYI）</h4>
+    <ul>
+      <li><strong>CEO</strong> = <strong>C</strong>hief <strong>E</strong>xecutive <strong>O</strong>fficer = 執行長</li>
+      <li><strong>CFO</strong> = <strong>C</strong>hief <strong>F</strong>inancial <strong>O</strong>fficer = 財務長</li>
+      <li><strong>COO</strong> = <strong>C</strong>hief <strong>O</strong>perating <strong>O</strong>fficer = 營運長</li>
+      <li><strong>VP</strong> = <strong>V</strong>ice <strong>P</strong>resident = 副總裁</li>
+      <li><strong>PM</strong> = <strong>P</strong>roject <strong>M</strong>anager = 專案經理</li>
+    </ul>
+  </div>
+
+  <h2 class="section-title"><span class="num">⑥</span> 四個社交回應用語</h2>
+
+  <div class="kp-box basic">
+    <span class="kp-tag">情境對應</span>
+    <h4>飯店／餐廳對話必備</h4>
+    <ul>
+      <li><strong>Here you go. / Here you are.</strong> → 遞東西給對方時說</li>
+      <li><strong>Thank you very much.</strong> → 收到東西／服務時說</li>
+      <li><strong>That sounds good. / That sounds like fun.</strong> → 同意提議時說</li>
+      <li><strong>That's fine with me. / That would be great.</strong> → 對時間／安排沒意見時說</li>
+    </ul>
+  </div>
+</section>
+
+
+<!-- ================================================== -->
+<!--                    QUIZ VIEW                       -->
+<!-- ================================================== -->
+<section class="view" id="view-quiz">
+
+  <!-- ====== 入口卡片 ====== -->
+  <div id="quiz-entry">
+    <h1 class="lesson-title" style="font-size:2.4rem">🎯 小考測驗<span class="ch">選擇你的練習模式</span></h1>
+
+    <div class="quiz-entry-grid">
+      <div class="quiz-entry-card practice" onclick="startPracticeMode()">
+        <span class="qe-icon">📚</span>
+        <h3>完整題庫 60 題</h3>
+        <p>練習模式 · 不限時<br>
+        每題作答後立刻顯示正確答案與詳解，可按題型篩選練習，適合<strong>逐題學習</strong>。</p>
+        <button class="qe-btn">進入題庫</button>
+      </div>
+
+      <div class="quiz-entry-card exam" onclick="startExamMode()">
+        <span class="qe-icon">🎲</span>
+        <h3>隨機 20 題測驗</h3>
+        <p>模擬小考 · 15 分鐘倒數<br>
+        從 60 題中按比例隨機抽 20 題（單字 5 + 片語 3 + 文意 3 + 單複數 2 + 時態 3 + 文法 4），<strong>全部做完一次性批改</strong>。</p>
+        <button class="qe-btn">開始測驗</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ====== 練習模式（60 題） ====== -->
+  <div id="quiz-practice" class="hidden">
+    <div class="mode-banner teal">
+      <div>
+        <h3>📚 練習模式 · 完整題庫</h3>
+        <p>每題作答後立刻顯示詳解。點選下方按鈕回到入口。</p>
+      </div>
+      <button class="btn btn-secondary" onclick="backToEntry()">← 返回入口</button>
+    </div>
+
+    <div class="quiz-toolbar">
+      <div class="progress-info">
+        共 <strong>60</strong> 題　目前題型篩選：
+        <span class="filter-tag active" data-filter="all">全部</span>
+        <span class="filter-tag" data-filter="vocab">單字</span>
+        <span class="filter-tag" data-filter="phrase">片語</span>
+        <span class="filter-tag" data-filter="reading">文意</span>
+        <span class="filter-tag" data-filter="number">單複數</span>
+        <span class="filter-tag" data-filter="tense">時態</span>
+        <span class="filter-tag" data-filter="grammar">文法</span>
+      </div>
+    </div>
+
+    <div id="practice-questions-container"></div>
+  </div>
+
+  <!-- ====== 測驗模式（20 題） ====== -->
+  <div id="quiz-exam" class="hidden">
+    <div class="mode-banner">
+      <div>
+        <h3>🎲 隨機 20 題測驗</h3>
+        <p>剩餘時間：<span id="exam-timer-display">15:00</span> · 已作答：<span id="exam-answered">0</span>/20</p>
+      </div>
+      <button class="btn btn-secondary" onclick="confirmExitExam()">提早離開</button>
+    </div>
+
+    <div class="quiz-toolbar">
+      <div class="progress-info">
+        <strong id="exam-question-count">20</strong> 題 · 按比例隨機抽題（單字 5 + 片語 3 + 文意 3 + 單複數 2 + 時態 3 + 文法 4）
+      </div>
+      <div class="timer" id="exam-timer">15:00</div>
+    </div>
+
+    <div id="exam-questions-container"></div>
+
+    <div class="exam-controls">
+      <button class="btn btn-primary" onclick="submitExam()">✓ 交卷批改</button>
+    </div>
+  </div>
+
+  <!-- ====== 測驗結果 ====== -->
+  <div id="quiz-result" class="hidden">
+    <div class="mode-banner">
+      <div>
+        <h3>📊 測驗結果</h3>
+        <p>來看看你的表現吧！</p>
+      </div>
+    </div>
+
+    <div class="result-panel">
+      <div class="result-label">Your Score</div>
+      <div class="result-score"><span id="result-score">0</span><small>/100</small></div>
+      <div id="result-comment" style="color:var(--ink-soft);font-style:italic;margin-top:8px">很棒的開始！繼續加油</div>
+      <div class="result-stats">
+        <div class="stat-item">
+          <div class="stat-num" id="result-correct">0</div>
+          <div class="stat-label">答對</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-num" style="color:var(--rust)" id="result-wrong">0</div>
+          <div class="stat-label">答錯</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-num" id="result-time">0:00</div>
+          <div class="stat-label">用時</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="exam-controls">
+      <button class="btn btn-primary" onclick="restartExam()">🔄 再來一次（重新抽題）</button>
+      <button class="btn btn-teal" onclick="backToEntry()">回到入口</button>
+    </div>
+
+    <h2 class="section-title"><span class="num">📋</span> 答題詳解</h2>
+    <div id="result-questions-container"></div>
+  </div>
+
+</section>
+
+<div class="footer">
+  © Lesson 4 · Receiving Foreign Guests 接待外賓 · 複習網站 · 製作給 Eric 老師
+</div>
+
+</div><!-- /container -->
+
+
+<script>
+/* ============================================================
+   60 題題庫資料
+   ============================================================ */
+const QUESTIONS = [
+  // ===== 單字題 1-15 =====
+  {id:1,type:"vocab",stem:"Don't forget to bring your ___ when you travel abroad.",options:["luggage","passport","baggage","ticket"],answer:1,
+   explain:"<strong>passport（護照）</strong>：[ˈpæsˌpɔrt]，出國時必帶的身分文件。句意：出國旅遊時別忘了帶護照。陷阱：luggage / baggage（行李）也常帶，但題目強調 'abroad'（出國），最關鍵的是 passport。",
+   source:"Part B（飯店入住，編號生字 ²）"},
+  {id:2,type:"vocab",stem:"Mary had too much ___, so she had to pay an extra fee at the airport.",options:["luggages","luggage","a luggage","two luggage"],answer:1,
+   explain:"⭐⭐⭐ <strong>老師紅色警示考點</strong>：luggage（行李）是<strong>不可數名詞</strong>，永遠用單數形！❌ luggages / a luggage / two luggage 都是錯的。⭕ 想表達「兩件行李」要說 two pieces of luggage 或 two bags。",
+   source:"Part A（Useful Expressions — 老師手寫強調）"},
+  {id:3,type:"vocab",stem:"The ___ from Taipei to Tokyo only takes three hours.",options:["fight","light","flight","right"],answer:2,
+   explain:"<strong>flight（飛行；班機）</strong>：[flaɪt]，名詞，指搭飛機的旅程。句意：從台北到東京的航程只要三個小時。拼字陷阱：fight（打架）、light（光）、right（右邊）都是相似拼字。",
+   source:"Part A（Word Bank ³）"},
+  {id:4,type:"vocab",stem:"I bought some ___ in Kyoto to bring back to my family.",options:["customers","coworkers","souvenirs","clients"],answer:2,
+   explain:"<strong>souvenir（紀念品）</strong>：[ˌsuvəˈnɪr]，旅行時買來送人或留念的物品。句意：我在京都買了一些紀念品要帶回去給家人。customer（顧客）、coworker（同事）、client（客戶）都是「人」，不符合句意。",
+   source:"Part D（Word Bank ¹）"},
+  {id:5,type:"vocab",stem:"At the night market, you can usually ___ with the seller to get a better price.",options:["bargain","borrow","bring","bother"],answer:0,
+   explain:"<strong>bargain（議價）</strong>：[ˈbɑrɡɪn]，動詞，討價還價。句意：在夜市，你通常可以跟賣家議價以拿到更好的價錢。borrow（借入）、bring（帶來）、bother（打擾）都是 b 開頭的陷阱字。",
+   source:"Part D（Word Bank ⁵）"},
+  {id:6,type:"vocab",stem:"Ms. Lee is the manager's ___. She answers his phone calls and arranges his meetings.",options:["president","secretary","customer","trainer"],answer:1,
+   explain:"<strong>secretary（秘書）</strong>：[ˈsɛkrəˌtɛrɪ]，協助主管的人。從句子描述（接電話、安排會議）可判斷是秘書。拼字小提示：secret（秘密）+ ary = secretary。",
+   source:"Part C（Word Bank ¹）"},
+  {id:7,type:"vocab",stem:"The hotel has 20 floors, so we'd better take the ___ instead of the stairs.",options:["escalator","elevator","entrance","exit"],answer:1,
+   explain:"<strong>elevator（電梯）</strong>：[ˈɛləˌvetɚ]，美式英文；英式用 lift。escalator（手扶梯）是陷阱選項，兩者不同。stair（樓梯）為反義字。",
+   source:"Part B（Word Bank ⁴）"},
+  {id:8,type:"vocab",stem:"When you arrive at the hotel, please go to the front desk and talk to the ___.",options:["customer","receptionist","president","trainer"],answer:1,
+   explain:"<strong>receptionist（接待員；櫃台人員）</strong>：[rɪˈsɛpʃənɪst]，在飯店、公司門口接待客人的人。來自 receive（接待）+ -ionist（職業字尾）。",
+   source:"Part B（人物代號 R）"},
+  {id:9,type:"vocab",stem:"This curry is too ___ for me. I need a glass of water!",options:["sweet","salty","spicy","sour"],answer:2,
+   explain:"<strong>spicy（辛辣的）</strong>：[ˈspaɪsɪ]，形容食物辣。從上下文「need water」可判斷是「辣」。sweet（甜）、salty（鹹）、sour（酸）是其他味道。",
+   source:"Part D（Word Bank ³）"},
+  {id:10,type:"vocab",stem:"My grandma's cookies are really ___! Everyone loves them.",options:["terrible","expensive","delicious","cheap"],answer:2,
+   explain:"<strong>delicious（美味的）</strong>：[dɪˈlɪʃəs]，形容食物好吃。從「Everyone loves them」可判斷是正面評價。",
+   source:"Part D（Word Bank ²）"},
+  {id:11,type:"vocab",stem:"On the airplane, I'd prefer a seat by the window rather than one on the ___.",options:["aisle","island","air","aim"],answer:0,
+   explain:"⭐ <strong>老師強調點</strong>：aisle（走道）[aɪl]，<strong>「s」不發音</strong>！冠詞用 an aisle seat（因 a- 是母音開頭發音）。island（島嶼）拼字相像但意思不同。",
+   source:"Part A（Useful Expressions）"},
+  {id:12,type:"vocab",stem:"There is an extra ___ of NT$200 for using the parking lot.",options:["change","charge","chance","choice"],answer:1,
+   explain:"<strong>charge（費用；收費）</strong>：[tʃɑrdʒ]，名詞，指要付的款項。change（找零／改變）、chance（機會）、choice（選擇）都是拼字相近的陷阱字。",
+   source:"Part B（Word Bank ³）"},
+  {id:13,type:"vocab",stem:"She studied ___ in college because she likes working with numbers.",options:["accountant","account","accounting","counting"],answer:2,
+   explain:"<strong>accounting（會計，學科）</strong>：[əˈkaʊntɪŋ]，不可數名詞。accountant（會計師，<strong>人</strong>）、account（帳戶）是相關但不同的字。主修「學科」用 accounting。",
+   source:"Part C（Word Bank ³）"},
+  {id:14,type:"vocab",stem:"On sunny days, I like to do ___ activities like hiking and cycling.",options:["indoor","outdoor","inside","outside"],answer:1,
+   explain:"<strong>outdoor（戶外的）</strong>：形容詞，修飾 activities。indoor（室內的）是反義字。注意陷阱：inside / outside 是副詞或名詞，<strong>不是形容詞</strong>，不適合修飾名詞。",
+   source:"Part D（Word Bank ⁴）"},
+  {id:15,type:"vocab",stem:"You can't enter the office without your employee ___.",options:["badge","bag","budget","bridge"],answer:0,
+   explain:"⭐ <strong>老師補充字</strong>：badge（識別證；徽章）[bædʒ]，公司員工配戴的身分證明。這是老師在第 6 張課本上手寫補充的字。類似職場字：ID（身分證）、name tag（名牌）。",
+   source:"Part B 老師補充字 ⭐"},
+
+  // ===== 片語題 16-25 =====
+  {id:16,type:"phrase",stem:"My father will ___ me ___ at the train station tonight.",options:["pick / out","pick / up","pick / on","pick / in"],answer:1,
+   explain:"<strong>pick sb up（接某人）</strong>：去某地把人接過來。受詞是代名詞 (me) 時必須放中間。pick on（找麻煩）、pick out（挑選）意思都不同。",
+   source:"Part A（片語 ◆）"},
+  {id:17,type:"phrase",stem:"We need to ___ at the airport two hours before the flight.",options:["check out","check on","check up","check in"],answer:3,
+   explain:"<strong>check in（辦理報到／入住）</strong>：機場登機報到、飯店辦理入住都可以用。反義：check out（退房／結帳離開）。老師補充：check in 也可用於圖書館借還書。",
+   source:"Part B（片語 ◆）"},
+  {id:18,type:"phrase",stem:"This box is too heavy. Can you ___?",options:["give me a hand","give a hand me","take me a hand","make me a hand"],answer:0,
+   explain:"<strong>give sb a hand（幫某人一把）</strong>= help sb。結構固定：give + 人 + a hand，順序不能變。take a hand、make a hand 都不是英文用法。",
+   source:"Part A（片語 ◆）"},
+  {id:19,type:"phrase",stem:"When new students come to our school, I always ___ them ___ the campus.",options:["show / out","show / off","show / around","show / up"],answer:2,
+   explain:"<strong>show sb around（地點）</strong>：帶某人參觀。show off（炫耀）、show up（出現）、show out（送客）意思都不同。",
+   source:"Part C（片語 ◆）"},
+  {id:20,type:"phrase",stem:"I'm really looking forward to ___ you next week.",options:["see","saw","seeing","to see"],answer:2,
+   explain:"⭐⭐⭐ <strong>必考點</strong>：look forward to + V-ing（期待……）。📌 關鍵：to 是<strong>介系詞</strong>，不是不定詞，後面接動名詞！❌ to see ⭕ to seeing",
+   source:"Part C（必考句型）"},
+  {id:21,type:"phrase",stem:"Would you mind ___ the window? It's very cold in here.",options:["close","to close","closing","closed"],answer:2,
+   explain:"⭐⭐⭐ <strong>老師圈起來強調的必考點</strong>：mind + V-ing（介意做某事）。mind 後面<strong>只能接動名詞</strong>！❌ to close ⭕ closing。回答：不介意 → No, not at all.",
+   source:"Part A Sequencing 練習（老師圈起強調）"},
+  {id:22,type:"phrase",stem:"Before the test, the teacher will ___ the important points with us.",options:["go up","go over","go out","go down"],answer:1,
+   explain:"<strong>go over（仔細檢視；複習；說明）</strong>：常用於複習、檢視文件。go up（上升）、go out（外出）、go down（下降）意思不同。",
+   source:"Part C（片語 ◆）"},
+  {id:23,type:"phrase",stem:"This new restaurant looks great. Let's ___ next weekend!",options:["try it out","try it on","try it in","try it over"],answer:0,
+   explain:"<strong>try out（試試看；試用）</strong>：用於試新東西、新地方。try on（試穿衣服）容易混淆，但 try on 專用在衣服。",
+   source:"Part C（片語 ◆）"},
+  {id:24,type:"phrase",stem:"Oh, ___, I forgot to tell you—the meeting is moved to Friday.",options:["on the way","in the way","by the way","at the way"],answer:2,
+   explain:"<strong>by the way（順帶一提）</strong>：用來轉換話題。on the way（在路上）、in the way（擋路）是不同片語。簡寫為 BTW。",
+   source:"Part D（片語 ◆）"},
+  {id:25,type:"phrase",stem:"Workers in our company need to ___ before 9 a.m. every day.",options:["punch out","punch on","punch off","punch in"],answer:3,
+   explain:"⭐ <strong>老師補充片語</strong>：punch in（上班打卡）／ punch out（下班打卡）。老師在課本第 6 張手寫補充：「punch in/out → 打卡」。",
+   source:"Part B 老師補充片語 ⭐"},
+
+  // ===== 文意理解題 26-35 =====
+  {id:26,type:"reading",stem:"<blockquote>Alex is waiting at the airport. He is holding a sign with the name \"Linda Chen\" on it. When a woman with a suitcase walks out, he goes up to her and says, \"Excuse me, are you Linda?\"</blockquote>What is Alex doing at the airport?",
+   options:["He is leaving for a trip.","He is picking up a visitor.","He is checking in for a flight.","He is buying a ticket."],answer:1,
+   explain:"從「holding a sign with a name on it（拿著寫有名字的牌子）」和「Are you Linda?」可判斷 Alex 在<strong>接機</strong>。pick up a visitor（接訪客）是 Part A 的核心情境。他自己沒有要出發旅行，也沒有要報到。",
+   source:"Part A（機場接機情境）"},
+  {id:27,type:"reading",stem:"<blockquote>Mark just got off a 14-hour flight. The food on the plane wasn't very good, so he is hungry. He is also very tired because he didn't sleep well during the flight.</blockquote>How does Mark probably feel right now?",
+   options:["Excited and full of energy","Hungry and tired","Happy and relaxed","Bored and sleepy only"],answer:1,
+   explain:"短文重點：「he is hungry」（飢餓）和「very tired」（疲累）。從「didn't sleep well」可知他累，從「food wasn't very good」可知他餓。D 只提到 sleepy，沒提到飢餓，不完整。",
+   source:"Part A（飛行旅程描述）"},
+  {id:28,type:"reading",stem:"<blockquote>Mr. Wang arrives at Sunshine Hotel at 3 p.m. He goes to the front desk and shows his passport. The receptionist gives him a key card and tells him his room is on the 8th floor.</blockquote>What is Mr. Wang doing?",
+   options:["He is leaving the hotel.","He is checking in at the hotel.","He is paying for dinner.","He is looking for a friend."],answer:1,
+   explain:"從「shows his passport」（出示護照）、「gives him a key card」（拿到房卡）可判斷他正在<strong>辦理入住 (check in)</strong>。入住流程：到櫃台 → 出示護照 → 拿房卡。",
+   source:"Part B（飯店入住情境）"},
+  {id:29,type:"reading",stem:"<blockquote>Emily is at a business hotel. The receptionist asks how she will pay for the room. Emily says, \"All the charges should go on my company credit card.\" She then hands the card to the receptionist.</blockquote>Who will pay for Emily's hotel stay?",
+   options:["Emily herself, with her own money.","Emily's family.","Emily's company.","The receptionist."],answer:2,
+   explain:"關鍵：「<strong>company</strong> credit card」（公司信用卡）。「charges go on my company credit card」表示帳款記在公司卡上，所以是<strong>公司付錢</strong>。陷阱：雖然 Emily 拿出卡，但是公司的卡。",
+   source:"Part B（付款方式）"},
+  {id:30,type:"reading",stem:"<blockquote>\"Hi, this is Megan. She's Mr. Lin's secretary. When you call the CEO's office, you'll talk to her first,\" said David, introducing the new client to his coworker.</blockquote>What is Megan's job?",
+   options:["She is the CEO.","She is a new client.","She is the CEO's secretary.","She is a customer."],answer:2,
+   explain:"短文中明確說「She's Mr. Lin's secretary」，且「When you call the CEO's office, you'll talk to her first」表示她是 CEO（Mr. Lin）的秘書。",
+   source:"Part C（公司參訪情境）"},
+  {id:31,type:"reading",stem:"<blockquote>\"And this is Henry. He's in charge of marketing. He'll show you the new ad campaign this afternoon,\" said the manager.</blockquote>What does Henry do?",
+   options:["He works in accounting.","He works in marketing.","He is the manager's secretary.","He is a customer."],answer:1,
+   explain:"從「He's in charge of marketing」可知 Henry 負責<strong>行銷部門</strong>。<strong>be in charge of（負責……）</strong>是 Part C 的重要片語。accounting（會計）不是 Henry 的部門。",
+   source:"Part C（in charge of 句型）"},
+  {id:32,type:"reading",stem:"<blockquote>Sarah is visiting Taiwan for the first time. Her host asks, \"Is there anything in particular you want to do?\" Sarah replies, \"I'd like to buy some gifts for my friends back home.\"</blockquote>What does Sarah want to do?",
+   options:["Go sightseeing in the city.","Try local food.","Buy souvenirs for her friends.","Visit her host's company."],answer:2,
+   explain:"從「buy some gifts for my friends」可判斷她想要買禮物 = souvenirs（紀念品）。雖然短文中沒有直接用 souvenir 這個字，但「gifts for friends back home」就是紀念品的概念。",
+   source:"Part D（紀念品情境）"},
+  {id:33,type:"reading",stem:"<blockquote>\"I want to make this lunch worth your while,\" said John to his guest. \"Is there anything you don't like to eat?\" The guest replied, \"I don't like very spicy food.\"</blockquote>What is John planning to do?",
+   options:["Take his guest sightseeing.","Treat his guest to a nice lunch.","Help his guest check in at the hotel.","Drive his guest to the airport."],answer:1,
+   explain:"<strong>worth your while（值得；物超所值）</strong>= 要讓你覺得這頓飯很值得。從「make this lunch worth your while」+「anything you don't like to eat?」可判斷他要<strong>請客吃飯</strong>。treat sb to + N = 請某人吃……",
+   source:"Part D（餐廳款待情境）"},
+  {id:34,type:"reading",stem:"<blockquote>\"By the way, you are allowed to bargain at this market. No one ever pays the first price the seller says,\" Tom told his foreign friend.</blockquote>What is Tom telling his friend?",
+   options:["The market is closed today.","The prices are fixed.","She can negotiate the price.","She must pay in cash."],answer:2,
+   explain:"<strong>bargain（議價）</strong>= <strong>negotiate the price</strong>（談價錢）。「No one pays the first price」意思是「沒人會直接付第一個開價」，所以可以議價。",
+   source:"Part D（市場議價情境）"},
+  {id:35,type:"reading",stem:"<blockquote>Customer: \"I prefer a window seat, please.\"<br>Agent: \"I'm sorry, all window seats in economy class are taken. Would you like a seat on the aisle?\"<br>Customer: \"OK, that's fine.\"</blockquote>What kind of seat did the customer finally get?",
+   options:["A window seat in economy class","A window seat in business class","An aisle seat in economy class","A first class seat"],answer:2,
+   explain:"客戶原本想要 window seat（靠窗），但 economy class（經濟艙）的靠窗座位都滿了，客戶接受了 aisle seat（走道座位）。所以最後是 <strong>economy class 的 aisle seat</strong>。客戶沒有升級到 business class。",
+   source:"Part A（Useful Expressions — 機場購票座位）"},
+
+  // ===== 單複數題 36-40 =====
+  {id:36,type:"number",stem:"You can only bring two pieces of ___ on the airplane.",options:["luggages","a luggage","luggage","luggage's"],answer:2,
+   explain:"⭐⭐⭐ <strong>老師紅色警示考點</strong>：luggage（行李）是<strong>不可數名詞</strong>，永遠用單數形！想表達「幾件行李」要用 <strong>two pieces of luggage</strong> 或 <strong>two bags</strong>。",
+   source:"Part A（Useful Expressions — 老師強調點）"},
+  {id:37,type:"number",stem:"After a long trip, Tina put all her ___ in the closet.",options:["stuffs","stuff","a stuff","stuffes"],answer:1,
+   explain:"<strong>stuff（東西，口語用法）</strong>是<strong>不可數名詞</strong>，沒有複數形！❌ stuffs / a stuff / stuffes 都是錯的。課文：「I'd like to put all my stuff away.」",
+   source:"Part A（put away 片語例句）"},
+  {id:38,type:"number",stem:"The ___ on this plane is not very tasty.",options:["foods","food","a food","an food"],answer:1,
+   explain:"<strong>food（食物）</strong>通常是<strong>不可數名詞</strong>，不加 s。雖然食物有很多種類時可以用 foods，但這裡指「食物總體」用單數。課文：「The food didn't taste very good.」",
+   source:"Part A（機場接機對話）"},
+  {id:39,type:"number",stem:"\"I don't have any ___ to check in. I'm only bringing this small backpack.\"",options:["bag","bags","baggages","a bag"],answer:1,
+   explain:"<strong>any + 可數複數名詞</strong>：any bags（O）／ any bag（X）。baggage（行李）是不可數，不能加 s（baggages 是錯的）。老師補充：bags 是最通用的字。",
+   source:"Part A（Useful Expressions — 行李篇）"},
+  {id:40,type:"number",stem:"Many ___ in our company come from different countries.",options:["peoples","person","people","a people"],answer:2,
+   explain:"<strong>people</strong> 本身就是<strong>複數名詞</strong>（= persons），不能再加 s。❌ peoples（用於「民族」時才加 s）／ person（單數，與 many 不符）。課文：「I'm going to introduce you to some important people here.」",
+   source:"Part C（公司參訪對話）"},
+
+  // ===== 動詞時態題 41-50 =====
+  {id:41,type:"tense",stem:"\"___ you ever ___ Japanese food before?\"",options:["Have / had","Did / had","Have / have","Are / have"],answer:0,
+   explain:"⭐⭐⭐ <strong>必考時態</strong>：現在完成式問句 Have you ever + 過去分詞 (p.p.)? 結構：Have/Has + 主詞 + ever + p.p. + before? have 的過去分詞是 had。",
+   source:"Part D（餐廳對話）"},
+  {id:42,type:"tense",stem:"A: \"Have you finished your homework yet?\"<br>B: \"No, I ___ .\"",options:["don't","didn't","haven't","wasn't"],answer:2,
+   explain:"<strong>現在完成式否定回答</strong>：用 haven't / hasn't。規則：問句用 Have/Has 開頭 → 回答也要用 haven't/hasn't。課文：「No, I haven't.」就是這個用法。",
+   source:"Part D（聽力填空 ❶）"},
+  {id:43,type:"tense",stem:"The food on the plane ___ taste very good last night.",options:["doesn't","isn't","didn't","wasn't"],answer:2,
+   explain:"<strong>過去式否定句</strong>：didn't + 原形動詞。從「last night」可判斷是過去式。❌ didn't tasted（錯，didn't 後動詞要回原形）。",
+   source:"Part A（機場接機對話）"},
+  {id:44,type:"tense",stem:"I was so tired that I ___ for ten hours last night.",options:["sleep","sleeping","sleeps","slept"],answer:3,
+   explain:"sleep 的過去式是 <strong>slept</strong>（不規則變化）。三態變化：sleep → slept → slept。從「last night」判斷是過去式。",
+   source:"Part A（機場接機對話）"},
+  {id:45,type:"tense",stem:"Look! Tonya ___ just ___ at the airport.",options:["has / arrived","is / arrive","was / arriving","did / arrive"],answer:0,
+   explain:"<strong>現在完成式</strong>：has/have + 過去分詞 (p.p.)，表示「剛剛發生且影響到現在」。從「just」（剛剛）可判斷是現在完成式。arrive 的 p.p. 是 arrived。",
+   source:"Part A（聽力理解）"},
+  {id:46,type:"tense",stem:"\"Don't worry. I ___ you with your luggage.\"",options:["help","helped","will help","helping"],answer:2,
+   explain:"<strong>未來式</strong>：will + 原形動詞，表「將會……」。從前句「Don't worry」（安慰口吻）可判斷是承諾未來的行為。課文：「I'll help you get the best deal.」",
+   source:"Part D（市場購物對話）"},
+  {id:47,type:"tense",stem:"\"How ___ you ___ for the room? With cash or credit card?\"",options:["do / pay","did / pay","will / be paying","are / paying"],answer:2,
+   explain:"<strong>未來進行式</strong>：will be + V-ing，用於詢問「將會怎麼做」（較禮貌）。課文：「How will you be paying for the room?」這是飯店櫃台的標準用語。",
+   source:"Part B（飯店入住對話）"},
+  {id:48,type:"tense",stem:"Lisa ___ to her boss in his office for half an hour. She still hasn't come out.",options:["has been talking","talks","talked","is talked"],answer:0,
+   explain:"<strong>現在完成進行式</strong>：has/have + been + V-ing，表示「從過去到現在持續進行」。從「still hasn't come out」（仍然沒出來）可判斷動作持續到現在。",
+   source:"Part B（Word Bank 例句）"},
+  {id:49,type:"tense",stem:"___ to the gym every day ___ me feel healthier.",options:["Going / makes","Going / make","Go / makes","To go / make"],answer:0,
+   explain:"⭐ <strong>重要文法</strong>：動名詞當主詞時，動詞用<strong>單數</strong>！Going（動名詞主詞）→ 動詞用 makes（單數）。課文：「Traveling always makes me tired.」",
+   source:"Part A（機場接機對話）"},
+  {id:50,type:"tense",stem:"You ___ to bring food and drinks into this library.",options:["are not allowed","don't allow","didn't allow","not allowed"],answer:0,
+   explain:"<strong>被動式</strong>：be allowed to + V（被允許做……）。否定：be <strong>not</strong> allowed to + V。課文：「you are allowed to bargain for the items there.」從句意可判斷是「規定不允許」。",
+   source:"Part D（市場議價對話）"},
+
+  // ===== 文法選擇題 51-60 =====
+  {id:51,type:"grammar",stem:"\"Would you mind ___ the door for me? My hands are full.\"",options:["open","to open","opening","opened"],answer:2,
+   explain:"⭐⭐⭐ <strong>老師圈起來強調的必考點</strong>：mind + V-ing（介意做某事）！❌ Would you mind to open（錯）⭕ Would you mind <strong>opening</strong>（對）。回答：不介意 → No, not at all.",
+   source:"Part A Sequencing 練習（老師圈起強調）"},
+  {id:52,type:"grammar",stem:"We are all looking forward to ___ our new English teacher.",options:["meet","meeting","to meet","met"],answer:1,
+   explain:"⭐⭐⭐ <strong>必考句型</strong>：look forward to + V-ing（期待……）。📌 關鍵：to 在這裡是<strong>介系詞</strong>，不是不定詞！類似用法：be used to + V-ing（習慣於……）。",
+   source:"Part C（必考句型）"},
+  {id:53,type:"grammar",stem:"You can choose ___ tea ___ coffee. They both come with the meal.",options:["either / or","neither / nor","both / and","either / and"],answer:0,
+   explain:"⭐ <strong>本課重點</strong>：either A or B（A 或 B 兩者擇一）。結構固定：either + N + or + N。neither/nor（兩者皆非）、both/and（兩者皆是）意思不同。",
+   source:"Part D Usage Tips"},
+  {id:54,type:"grammar",stem:"A: \"I don't like to wake up early.\"<br>B: \"I don't like to wake up early, ___.\"",options:["too","either","neither","also"],answer:1,
+   explain:"⭐ <strong>本課重點</strong>：<strong>否定句的「也」要用 either</strong>，放句尾。肯定句的「也」才用 too / also。❌ I don't like it, too. ⭕ I don't like it, either.",
+   source:"Part D Usage Tips"},
+  {id:55,type:"grammar",stem:"My brother prefers basketball ___ baseball.",options:["than","to","from","with"],answer:1,
+   explain:"⭐⭐ <strong>必考句型陷阱</strong>：prefer A <strong>to</strong> B（喜歡 A 勝過 B）。📌 關鍵：這裡用 <strong>to</strong>，<strong>不是 than</strong>！❌ prefer A than B 是常見錯誤。",
+   source:"Part D Sentence Patterns"},
+  {id:56,type:"grammar",stem:"I'm too tired to cook tonight. I'd prefer ___ out.",options:["eat","to eat","eating","ate"],answer:1,
+   explain:"<strong>prefer to + V</strong>（比較喜歡做……）：prefer 後接<strong>不定詞</strong>。注意 prefer 三種句型：① prefer A or B ② prefer to + V ③ prefer A to B。",
+   source:"Part D Sentence Patterns"},
+  {id:57,type:"grammar",stem:"I'm hungry. Let's get ___ to eat.",options:["delicious something","something delicious","a delicious","delicious"],answer:1,
+   explain:"⭐⭐ <strong>必考文法陷阱</strong>：something / anything / nothing + 形容詞：形容詞要<strong>放在後面</strong>！❌ delicious something ⭕ <strong>something delicious</strong>",
+   source:"Part D（餐廳對話）"},
+  {id:58,type:"grammar",stem:"\"I ___ stay home and watch a movie ___ go to the party tonight.\"",options:["would prefer / than","would rather / than","would like / than","would rather / to"],answer:1,
+   explain:"<strong>would rather + V₁ + than + V₂</strong>（寧可……也不願……）。📌 關鍵：rather 與 than <strong>後面都接原形動詞</strong>！縮寫：I'd rather = I would rather。",
+   source:"Part C Word Bank 例句"},
+  {id:59,type:"grammar",stem:"\"___ you've finished your dinner, you can have some ice cream for dessert.\"",options:["Because that","Now that","If that","So that"],answer:1,
+   explain:"<strong>Now that + 子句</strong>（既然……）：連接詞用法。結構：Now that + 完整子句 → 表「既然……（那就……）」。老師在第 6 張手寫「now that → 既然」。",
+   source:"Part B（飯店入住對話）"},
+  {id:60,type:"grammar",stem:"After a long day at work, I really feel like ___ a hot bath.",options:["take","to take","taking","took"],answer:2,
+   explain:"<strong>feel like + V-ing</strong>（想要做……）：feel like 後面<strong>只能接動名詞</strong>！❌ feel like to take ⭕ feel like <strong>taking</strong>",
+   source:"Part D Language Notes 例句"}
+];
+
+const TYPE_LABEL = {
+  vocab:"單字題",
+  phrase:"片語題",
+  reading:"文意理解",
+  number:"單複數",
+  tense:"動詞時態",
+  grammar:"文法選擇"
+};
+
+
+/* ============================================================
+   導覽切換
+   ============================================================ */
+const navTabs = document.querySelectorAll('.nav-tab');
+const views = document.querySelectorAll('.view');
+
+function switchView(viewName){
+  views.forEach(v => v.classList.remove('active'));
+  navTabs.forEach(t => t.classList.remove('active'));
+  document.getElementById('view-' + viewName)?.classList.add('active');
+  document.querySelector(`.nav-tab[data-view="${viewName}"]`)?.classList.add('active');
+  window.scrollTo({top:0,behavior:'smooth'});
+}
+
+navTabs.forEach(tab => {
+  tab.addEventListener('click', () => switchView(tab.dataset.view));
+});
+
+document.querySelectorAll('.menu-card[data-go]').forEach(card => {
+  card.addEventListener('click', () => switchView(card.dataset.go));
+});
+
+/* ============================================================
+   手機單字點擊翻譯：iOS / Android tap 顯示中文
+   ============================================================ */
+const vocabMarks = document.querySelectorAll('.vocab-mark[data-cn]');
+
+function closeAllVocabTooltips(except = null){
+  vocabMarks.forEach(mark => {
+    if(mark !== except) mark.classList.remove('show-tooltip');
+  });
+}
+
+vocabMarks.forEach(mark => {
+  const cn = mark.dataset.cn || '';
+  mark.setAttribute('aria-label', `${mark.textContent.trim()}：${cn}`);
+  mark.setAttribute('title', cn);
+
+  mark.addEventListener('click', event => {
+    event.stopPropagation();
+    const alreadyOpen = mark.classList.contains('show-tooltip');
+    closeAllVocabTooltips(mark);
+    mark.classList.toggle('show-tooltip', !alreadyOpen);
+  });
+
+  mark.addEventListener('keydown', event => {
+    if(event.key === 'Enter' || event.key === ' '){
+      event.preventDefault();
+      const alreadyOpen = mark.classList.contains('show-tooltip');
+      closeAllVocabTooltips(mark);
+      mark.classList.toggle('show-tooltip', !alreadyOpen);
+    }
+    if(event.key === 'Escape'){
+      mark.classList.remove('show-tooltip');
+      mark.blur();
+    }
+  });
+});
+
+document.addEventListener('click', () => closeAllVocabTooltips());
+document.addEventListener('touchstart', event => {
+  if(!event.target.closest('.vocab-mark')) closeAllVocabTooltips();
+}, {passive:true});
+
+/* ============================================================
+   練習模式（60 題）
+   ============================================================ */
+let practiceFilter = 'all';
+
+function renderPracticeQuestions(){
+  const container = document.getElementById('practice-questions-container');
+  const filtered = practiceFilter === 'all' ? QUESTIONS : QUESTIONS.filter(q => q.type === practiceFilter);
+  container.innerHTML = filtered.map(q => renderQuestion(q, 'practice')).join('');
+  attachOptionClicks(container, 'practice');
+}
+
+function attachOptionClicks(container, mode){
+  container.querySelectorAll('.q-option').forEach(opt => {
+    opt.addEventListener('click', e => {
+      const qid = parseInt(opt.dataset.qid);
+      const idx = parseInt(opt.dataset.idx);
+      if(mode === 'practice'){
+        handlePracticeAnswer(qid, idx);
+      } else if(mode === 'exam'){
+        handleExamAnswer(qid, idx);
+      }
+    });
+  });
+}
+
+function renderQuestion(q, mode){
+  const typeLabel = TYPE_LABEL[q.type];
+  return `
+    <div class="quiz-question" id="q-${mode}-${q.id}">
+      <div class="q-header">
+        <span class="q-num">${q.id}.</span>
+        <span class="q-type">${typeLabel}</span>
+      </div>
+      <div class="q-stem">${q.stem}</div>
+      <ul class="q-options" data-qid="${q.id}">
+        ${q.options.map((opt, idx) => `
+          <li class="q-option" data-qid="${q.id}" data-idx="${idx}">
+            <span class="opt-letter">${['A','B','C','D'][idx]}.</span>
+            <span class="opt-text">${opt}</span>
+          </li>
+        `).join('')}
+      </ul>
+      <div class="q-explain" id="explain-${mode}-${q.id}">
+        <span class="ex-label">詳解</span>
+        <span class="ex-correct">正解：${['A','B','C','D'][q.answer]}.</span> ${q.explain}
+        <div class="q-source">${q.source}</div>
+      </div>
+    </div>
+  `;
+}
+
+function handlePracticeAnswer(qid, idx){
+  const q = QUESTIONS.find(x => x.id === qid);
+  const questionEl = document.getElementById(`q-practice-${qid}`);
+  if(!questionEl) return;
+  const options = questionEl.querySelectorAll('.q-option');
+  if(options[0].classList.contains('disabled')) return;
+  options.forEach((opt, i) => {
+    opt.classList.add('disabled');
+    if(i === q.answer) opt.classList.add('correct');
+    if(i === idx && idx !== q.answer) opt.classList.add('wrong');
+  });
+  document.getElementById(`explain-practice-${qid}`).classList.add('show');
+}
+
+document.querySelectorAll('.filter-tag').forEach(tag => {
+  tag.addEventListener('click', () => {
+    document.querySelectorAll('.filter-tag').forEach(t => t.classList.remove('active'));
+    tag.classList.add('active');
+    practiceFilter = tag.dataset.filter;
+    renderPracticeQuestions();
+  });
+});
+
+function startPracticeMode(){
+  document.getElementById('quiz-entry').classList.add('hidden');
+  document.getElementById('quiz-practice').classList.remove('hidden');
+  document.getElementById('quiz-exam').classList.add('hidden');
+  document.getElementById('quiz-result').classList.add('hidden');
+  practiceFilter = 'all';
+  document.querySelectorAll('.filter-tag').forEach(t => t.classList.remove('active'));
+  document.querySelector('.filter-tag[data-filter="all"]').classList.add('active');
+  renderPracticeQuestions();
+}
+
+function backToEntry(){
+  if(examTimerInterval){
+    clearInterval(examTimerInterval);
+    examTimerInterval = null;
+  }
+  document.getElementById('quiz-entry').classList.remove('hidden');
+  document.getElementById('quiz-practice').classList.add('hidden');
+  document.getElementById('quiz-exam').classList.add('hidden');
+  document.getElementById('quiz-result').classList.add('hidden');
+}
+
+/* ============================================================
+   測驗模式（20 題隨機抽題 + 計時）
+   ============================================================ */
+let examQuestions = [];
+let examAnswers = {};
+let examTimeLeft = 15 * 60;
+let examTimerInterval = null;
+let examStartTime = 0;
+
+function shuffle(arr){
+  const a = [...arr];
+  for(let i = a.length - 1; i > 0; i--){
+    const j = Math.floor(Math.random() * (i + 1));
+    [a[i], a[j]] = [a[j], a[i]];
+  }
+  return a;
+}
+
+function pickRandom(type, n){
+  const pool = QUESTIONS.filter(q => q.type === type);
+  return shuffle(pool).slice(0, n);
+}
+
+function generateExamQuestions(){
+  return [
+    ...pickRandom('vocab', 5),
+    ...pickRandom('phrase', 3),
+    ...pickRandom('reading', 3),
+    ...pickRandom('number', 2),
+    ...pickRandom('tense', 3),
+    ...pickRandom('grammar', 4)
+  ];
+}
+
+function startExamMode(){
+  examQuestions = generateExamQuestions();
+  examAnswers = {};
+  examTimeLeft = 15 * 60;
+  examStartTime = Date.now();
+
+  document.getElementById('quiz-entry').classList.add('hidden');
+  document.getElementById('quiz-practice').classList.add('hidden');
+  document.getElementById('quiz-exam').classList.remove('hidden');
+  document.getElementById('quiz-result').classList.add('hidden');
+
+  renderExamQuestions();
+  updateExamProgress();
+  startTimer();
+}
+
+function renderExamQuestions(){
+  const container = document.getElementById('exam-questions-container');
+  container.innerHTML = examQuestions.map((q, idx) => {
+    const examNum = idx + 1;
+    return `
+      <div class="quiz-question" id="q-exam-${q.id}">
+        <div class="q-header">
+          <span class="q-num">${examNum}.</span>
+          <span class="q-type">${TYPE_LABEL[q.type]}</span>
+        </div>
+        <div class="q-stem">${q.stem}</div>
+        <ul class="q-options" data-qid="${q.id}">
+          ${q.options.map((opt, i) => `
+            <li class="q-option" data-qid="${q.id}" data-idx="${i}">
+              <span class="opt-letter">${['A','B','C','D'][i]}.</span>
+              <span class="opt-text">${opt}</span>
+            </li>
+          `).join('')}
+        </ul>
+      </div>
+    `;
+  }).join('');
+  attachOptionClicks(container, 'exam');
+}
+
+function handleExamAnswer(qid, idx){
+  examAnswers[qid] = idx;
+  const questionEl = document.getElementById(`q-exam-${qid}`);
+  questionEl.querySelectorAll('.q-option').forEach((opt, i) => {
+    opt.classList.toggle('selected', i === idx);
+  });
+  updateExamProgress();
+}
+
+function updateExamProgress(){
+  document.getElementById('exam-answered').textContent = Object.keys(examAnswers).length;
+}
+
+function startTimer(){
+  updateTimerDisplay();
+  if(examTimerInterval) clearInterval(examTimerInterval);
+  examTimerInterval = setInterval(() => {
+    examTimeLeft--;
+    updateTimerDisplay();
+    if(examTimeLeft <= 0){
+      clearInterval(examTimerInterval);
+      examTimerInterval = null;
+      alert('⏰ 時間到！自動交卷。');
+      submitExam();
+    }
+  }, 1000);
+}
+
+function updateTimerDisplay(){
+  const mm = String(Math.floor(examTimeLeft / 60)).padStart(2, '0');
+  const ss = String(examTimeLeft % 60).padStart(2, '0');
+  const display = `${mm}:${ss}`;
+  document.getElementById('exam-timer').textContent = display;
+  document.getElementById('exam-timer-display').textContent = display;
+  const timerEl = document.getElementById('exam-timer');
+  if(examTimeLeft <= 60) timerEl.classList.add('warning');
+  else timerEl.classList.remove('warning');
+}
+
+function confirmExitExam(){
+  if(confirm('確定要離開測驗嗎？目前進度將不會保存。')){
+    if(examTimerInterval){
+      clearInterval(examTimerInterval);
+      examTimerInterval = null;
+    }
+    backToEntry();
+  }
+}
+
+function submitExam(){
+  if(examTimerInterval){
+    clearInterval(examTimerInterval);
+    examTimerInterval = null;
+  }
+  const unanswered = examQuestions.filter(q => examAnswers[q.id] === undefined).length;
+  if(unanswered > 0 && examTimeLeft > 0){
+    if(!confirm(`還有 ${unanswered} 題未作答，確定要交卷嗎？`)) {
+      startTimer();
+      return;
+    }
+  }
+
+  let correct = 0;
+  examQuestions.forEach(q => {
+    if(examAnswers[q.id] === q.answer) correct++;
+  });
+  const total = examQuestions.length;
+  const score = Math.round((correct / total) * 100);
+  const wrong = total - correct;
+  const usedSeconds = Math.floor((Date.now() - examStartTime) / 1000);
+  const usedMm = String(Math.floor(usedSeconds / 60)).padStart(1, '0');
+  const usedSs = String(usedSeconds % 60).padStart(2, '0');
+
+  document.getElementById('result-score').textContent = score;
+  document.getElementById('result-correct').textContent = correct;
+  document.getElementById('result-wrong').textContent = wrong;
+  document.getElementById('result-time').textContent = `${usedMm}:${usedSs}`;
+
+  let comment = '';
+  if(score === 100) comment = '🎉 滿分！完美無瑕的表現！';
+  else if(score >= 90) comment = '🌟 太棒了！幾乎完全掌握本課！';
+  else if(score >= 80) comment = '👍 表現很好！再多複習幾個錯題就完美了。';
+  else if(score >= 70) comment = '💪 還不錯！建議再多看一次考前重點。';
+  else if(score >= 60) comment = '📚 及格了！把錯題仔細看過，下次會更好。';
+  else comment = '📖 別氣餒！回去再複習一遍課文，重新挑戰！';
+  document.getElementById('result-comment').textContent = comment;
+
+  renderResultQuestions();
+
+  document.getElementById('quiz-exam').classList.add('hidden');
+  document.getElementById('quiz-result').classList.remove('hidden');
+  window.scrollTo({top:0,behavior:'smooth'});
+}
+
+function renderResultQuestions(){
+  const container = document.getElementById('result-questions-container');
+  container.innerHTML = examQuestions.map((q, idx) => {
+    const examNum = idx + 1;
+    const userAnswer = examAnswers[q.id];
+    const isCorrect = userAnswer === q.answer;
+    const unanswered = userAnswer === undefined;
+    return `
+      <div class="quiz-question" style="border-left:4px solid ${isCorrect ? 'var(--olive)' : 'var(--rust)'}">
+        <div class="q-header">
+          <span class="q-num">${examNum}.</span>
+          <span class="q-type">${TYPE_LABEL[q.type]}</span>
+          <span style="margin-left:auto;font-weight:600;color:${isCorrect ? 'var(--olive)' : 'var(--rust)'}">
+            ${unanswered ? '⚠️ 未作答' : (isCorrect ? '✓ 答對' : '✗ 答錯')}
+          </span>
+        </div>
+        <div class="q-stem">${q.stem}</div>
+        <ul class="q-options">
+          ${q.options.map((opt, i) => {
+            let cls = 'q-option disabled';
+            if(i === q.answer) cls += ' correct';
+            if(i === userAnswer && !isCorrect) cls += ' wrong';
+            return `<li class="${cls}"><span class="opt-letter">${['A','B','C','D'][i]}.</span><span class="opt-text">${opt}</span></li>`;
+          }).join('')}
+        </ul>
+        <div class="q-explain show">
+          <span class="ex-label">詳解</span>
+          <span class="ex-correct">正解：${['A','B','C','D'][q.answer]}.</span> ${q.explain}
+          <div class="q-source">${q.source}</div>
+        </div>
+      </div>
+    `;
+  }).join('');
+}
+
+function restartExam(){
+  startExamMode();
+}
+
+/* ============================================================
+   初始化
+   ============================================================ */
+// 預先渲染練習題（雖然隱藏），避免第一次點進去有延遲
+// 也可以延後到點擊時才渲染，這裡選擇延後
+</script>
+
+</body>
+</html>
